@@ -611,15 +611,28 @@ a {
 }
 .sdg-chip {
   display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+  align-items: stretch;
+  gap: 0.5rem;
+  padding: 0 0.85rem 0 0;
+  min-height: 32px;
   background: #fff;
   border: 2px solid;
   border-radius: 999px;
+  overflow: hidden;
   font-size: 0.88rem;
   font-weight: 550;
   line-height: 1.2;
+}
+/* the number square fills the pill's left end, edge to edge */
+.sdg-chip > .sdg-badge {
+  width: 34px;
+  height: auto;
+  border-radius: 0;
+  padding-left: 3px;
+}
+.sdg-chip > span:last-child {
+  align-self: center;
+  padding: 0.3rem 0;
 }
 
 /* Thumb grid */
