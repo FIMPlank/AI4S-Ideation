@@ -53,11 +53,11 @@ export interface Searchable {
 }
 
 /** Precompute normalized text once per card. */
-export function buildIndex(cards: Card[], archetypes: Archetype[]): Searchable[] {
+export function buildIndex(cards: Card[], archetypes: Archetype[], extraText?: (c: Card) => string): Searchable[] {
   const byId = new Map(archetypes.map((a) => [a.id, a]))
   return cards.map((card) => {
     const archetype = card.archetypeId ? byId.get(card.archetypeId) : undefined
-    return { card, archetype, text: normalize(cardText(card, archetype)) }
+    return { card, archetype, text: normalize(cardText(card, archetype) + '\n' + (extraText?.(card) ?? '')) }
   })
 }
 
