@@ -330,11 +330,32 @@ a {
   justify-content: center;
 }
 .hero__card {
+  --spread: 40px;
   position: absolute;
   bottom: 0;
   width: 120px;
   transform-origin: 50% 120%;
-  transform: translateX(calc(var(--i) * 40px)) rotate(calc(var(--i) * 8deg));
+  transform: translateX(calc(var(--i) * var(--spread))) rotate(calc(var(--i) * 8deg));
+  /* same shuffle as the draw pile (#/ziehen), then the cards fan out */
+  animation: hero-shuffle 1.6s cubic-bezier(0.45, 0.05, 0.25, 1) 0.15s both;
+  animation-delay: calc(0.15s + (var(--i) + 2) * 50ms);
+}
+@keyframes hero-shuffle {
+  0% {
+    transform: translateY(-6px) rotate(calc(var(--i) * 2deg));
+  }
+  25% {
+    transform: translateX(calc(var(--i) * -0.9 * var(--spread))) rotate(calc(var(--i) * -10deg)) translateY(-18px);
+  }
+  50% {
+    transform: translateX(calc(var(--i) * 0.5 * var(--spread))) rotate(calc(var(--i) * 4deg));
+  }
+  70% {
+    transform: translateX(calc(var(--i) * -0.4 * var(--spread))) rotate(calc(var(--i) * -6deg)) translateY(-10px);
+  }
+  100% {
+    transform: translateX(calc(var(--i) * var(--spread))) rotate(calc(var(--i) * 8deg));
+  }
 }
 .archetype-list {
   list-style: none;
@@ -992,8 +1013,8 @@ a {
     height: 400px;
   }
   .hero__card {
+    --spread: 52px;
     width: 190px;
-    transform: translateX(calc(var(--i) * 52px)) rotate(calc(var(--i) * 8deg));
   }
   .flow {
     grid-template-columns: repeat(4, 1fr);
@@ -1030,6 +1051,9 @@ a {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+  }
+  .hero__card {
+    animation: none;
   }
   .card-stack__card,
   .card-grid__link .card-img,
