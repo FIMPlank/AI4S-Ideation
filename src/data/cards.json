@@ -1,0 +1,1748 @@
+{
+  "meta": {
+    "title": "Ideation Cards – Twin Transformation",
+    "publisher": "Fraunhofer-Forschungscampus Twin Transformation (FFTT)",
+    "language": "de",
+    "cardFormat": "A6, 105 × 148 mm, double-sided",
+    "source": "Ideation_Cards_Twin_Transformation_105x148mm_FINAL.pdf",
+    "extracted": "2026-11-25",
+    "corrections": [
+      {
+        "from": "Insprations-Modus",
+        "to": "Inspirations-Modus"
+      },
+      {
+        "from": "Nutzten Sie",
+        "to": "Nutzen Sie"
+      },
+      {
+        "from": "ertsellt",
+        "to": "erstellt"
+      },
+      {
+        "from": "Maschienenbau",
+        "to": "Maschinenbau"
+      },
+      {
+        "from": "Univeler",
+        "to": "Unilever"
+      },
+      {
+        "from": "Ausschreibungs-unterlagen",
+        "to": "Ausschreibungsunterlagen"
+      },
+      {
+        "from": "Nachhaltigkeits-strategien",
+        "to": "Nachhaltigkeitsstrategien"
+      },
+      {
+        "from": "Kund*innen",
+        "to": "Kund:innen"
+      },
+      {
+        "from": "Nutzer*innen",
+        "to": "Nutzer:innen"
+      },
+      {
+        "from": "verbunden..",
+        "to": "verbunden."
+      }
+    ],
+    "strayHyphensFixed": [
+      "Abstimmungs-aufwand",
+      "Anpas-sungen",
+      "Energiemanage-ment",
+      "Entscheidungs-findung",
+      "Entscheidungs-hilfen",
+      "Entscheidungs-unterstützung",
+      "Nachhaltigkeits-kennzahlen",
+      "Personen-nahverkehrs",
+      "Prozess-daten",
+      "Prozess-gestaltungen",
+      "Ressourcen-verbrauch",
+      "Routen-optimierung",
+      "Stadtentwicklungs-projekten",
+      "Verbrauchs-prognosen",
+      "Wieder-vermarktung",
+      "material-effizienterer",
+      "ressourcen-schonendere"
+    ],
+    "contentIssues": [
+      "a1-activation: case overview names 'One Ocean Modelle', but the case card is 'Ocean Disclosure Initiative'.",
+      "a3-organisation: value proposition is identical to a1-organisation ('…im Nachhaltigkeitsreporting'), although a3 is about personalised advice.",
+      "a5-technology tip and a5-organisation value proposition say almost the same thing.",
+      "a7-technology tip is identical to a6-technology tip (Llama 3); a7-organisation value proposition is near-identical to a6-organisation.",
+      "a4-case-4: front says 'Brammibal‘s Donut', back says 'Brammibal‘s Donuts'."
+    ]
+  },
+  "archetypes": [
+    {
+      "id": "a1",
+      "number": 1,
+      "title": "Nachhaltigkeitsangaben aus Unternehmensberichten extrahieren und überprüfen",
+      "colour": "#EF7C00",
+      "sdgs": [
+        9,
+        12,
+        13,
+        16
+      ]
+    },
+    {
+      "id": "a2",
+      "number": 2,
+      "title": "Erfassen und ermitteln strukturierter Nachhaltigkeitsdaten",
+      "colour": "#BA1153",
+      "sdgs": [
+        11,
+        15
+      ]
+    },
+    {
+      "id": "a3",
+      "number": 3,
+      "title": "Individuelle Beratung für soziale Wirkung",
+      "colour": "#008198",
+      "sdgs": [
+        11,
+        12
+      ]
+    },
+    {
+      "id": "a4",
+      "number": 4,
+      "title": "Auswirkungen auf Nachhaltigkeit vorhersagen",
+      "colour": "#009878",
+      "sdgs": [
+        11,
+        12
+      ]
+    },
+    {
+      "id": "a5",
+      "number": 5,
+      "title": "Optimierungsempfehlungen für operative Nachhaltigkeit",
+      "colour": "#FBB900",
+      "sdgs": [
+        11,
+        12,
+        15
+      ]
+    },
+    {
+      "id": "a6",
+      "number": 6,
+      "title": "Nachhaltige Alternativen für Prozesse und Produkte generieren",
+      "colour": "#BBCE01",
+      "sdgs": [
+        8,
+        9,
+        10,
+        12
+      ]
+    },
+    {
+      "id": "a7",
+      "number": 7,
+      "title": "Nachhaltigkeitsaktionen bewerten und automatisieren",
+      "colour": "#43BCCD",
+      "sdgs": [
+        8,
+        9
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "guide-inspiration-1",
+      "type": "guide",
+      "archetypeId": null,
+      "mode": "inspiration-1",
+      "title": "Inspirations-Modus 1",
+      "steps": [
+        {
+          "text": "Workshop-Gruppe wird in Gruppen geteilt.",
+          "subItems": []
+        },
+        {
+          "text": "Jede Gruppe zieht eine Kartenkategorie.",
+          "subItems": []
+        },
+        {
+          "text": "Sie liest:",
+          "subItems": [
+            "Überblickskarte",
+            "Eigenschaften-Karte",
+            "Use-Case-Karten"
+          ]
+        },
+        {
+          "text": "Aufgabe der Gruppe: Entwickelt 2–3 neue Use Cases für eure Organisation.",
+          "subItems": []
+        }
+      ],
+      "what": "Skizzen neuer KI-Use-Case-Ideen",
+      "when": "Ideation-Phase eines Workshops & strukturierte Brainstorming Sessions",
+      "images": {
+        "front": {
+          "full": "cards/full/guide-inspiration-1-front.webp",
+          "thumb": "cards/thumb/guide-inspiration-1-front.webp"
+        },
+        "back": {
+          "full": "cards/full/guide-inspiration-1-back.webp",
+          "thumb": "cards/thumb/guide-inspiration-1-back.webp"
+        }
+      },
+      "pages": {
+        "front": 1,
+        "back": 2
+      }
+    },
+    {
+      "id": "guide-inspiration-2",
+      "type": "guide",
+      "archetypeId": null,
+      "mode": "inspiration-2",
+      "title": "Inspirations-Modus 2",
+      "steps": [
+        {
+          "text": "Legen Sie die Informations-Karten offen auf den Tisch.",
+          "subItems": []
+        },
+        {
+          "text": "Die Teilnehmenden lesen die Use-Case-Karten zu jedem Archetyp.",
+          "subItems": []
+        },
+        {
+          "text": "Jede Person markiert die 2–3 interessantesten Use Cases (z. B. mit Stickern).",
+          "subItems": []
+        },
+        {
+          "text": "Diskutieren Sie gemeinsam:",
+          "subItems": [
+            "Welche Archetypen sind für unser Unternehmen relevant?",
+            "Welche Beispiele lassen sich auf unseren Kontext übertragen?"
+          ]
+        }
+      ],
+      "what": "Priorisierte Archetypen und erste Ideen",
+      "when": "Beginn eines Workshops",
+      "images": {
+        "front": {
+          "full": "cards/full/guide-inspiration-2-front.webp",
+          "thumb": "cards/thumb/guide-inspiration-2-front.webp"
+        },
+        "back": {
+          "full": "cards/full/guide-inspiration-2-back.webp",
+          "thumb": "cards/thumb/guide-inspiration-2-back.webp"
+        }
+      },
+      "pages": {
+        "front": 3,
+        "back": 4
+      }
+    },
+    {
+      "id": "guide-strategy",
+      "type": "guide",
+      "archetypeId": null,
+      "mode": "strategy",
+      "title": "Strategie-Modus",
+      "steps": [
+        {
+          "text": "Wählen Sie einen priorisierten Archetypen oder Use Case.",
+          "subItems": []
+        },
+        {
+          "text": "Nutzen Sie die Eigenschaften-Karte, um zu diskutieren:",
+          "subItems": [
+            "Welche technischen Voraussetzungen braucht der Archetyp?",
+            "Welche organisatorischen Veränderungen sind nötig?",
+            "Wie könnten wir diesen Archetyp konkret implementieren?"
+          ]
+        },
+        {
+          "text": "Bewerten Sie die Idee nach:",
+          "subItems": [
+            "Nachhaltigkeitswirkung",
+            "Umsetzbarkeit",
+            "Geschäftsnutzen"
+          ]
+        }
+      ],
+      "what": "Priorisierte KI-Use-Cases & erste Umsetzungsschritte",
+      "when": "Strategie- oder Management Workshops",
+      "images": {
+        "front": {
+          "full": "cards/full/guide-strategy-front.webp",
+          "thumb": "cards/thumb/guide-strategy-front.webp"
+        },
+        "back": {
+          "full": "cards/full/guide-strategy-back.webp",
+          "thumb": "cards/thumb/guide-strategy-back.webp"
+        }
+      },
+      "pages": {
+        "front": 5,
+        "back": 6
+      }
+    },
+    {
+      "id": "a1-archetype",
+      "type": "archetype",
+      "archetypeId": "a1",
+      "title": "Nachhaltigkeitsangaben aus Unternehmensberichten extrahieren und überprüfen",
+      "intro": "Natural Language Processing (NLP) ermöglicht es KI-Systemen, Texte automatisch zu analysieren, zu strukturieren und auch zu generieren. Dadurch entstehen zwei zentrale Hebel für mehr Nachhaltigkeit:",
+      "points": [
+        "Nachhaltigkeitsmaßnahmen von Unternehmen können aus Berichten extrahiert werden, um Monitoring und Nachhaltigkeitsaudits zu verbessern. Das schafft mehr Transparenz und stärkt Aufsichtsbehörden.",
+        "Nachhaltigkeitsregulierung kann analysiert, gebündelt und nutzerfreundlich interpretiert werden. Das ermöglicht eine schnelle und rechtskonforme Umsetzung von Nachhaltigkeitsmaßnahmen."
+      ],
+      "sustainabilityLink": "Die effizientere Verifikation und Bündelung von Nachhaltigkeitsberichten bietet das größte Potenzial für ökonomische und ökologische Nachhaltigkeit.",
+      "images": {
+        "front": {
+          "full": "cards/full/a1-archetype-front.webp",
+          "thumb": "cards/thumb/a1-archetype-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a1-archetype-back.webp",
+          "thumb": "cards/thumb/a1-archetype-back.webp"
+        }
+      },
+      "pages": {
+        "front": 7,
+        "back": 8
+      }
+    },
+    {
+      "id": "a1-technology",
+      "type": "technology",
+      "archetypeId": "a1",
+      "title": "Technologie",
+      "points": [
+        "NLP-Algorithmen wurden speziell für die Analyse, Aggregation und Formulierung natürlicher Sprache entwickelt.",
+        "Trainingsdaten für Textanalyse-Modelle bestehen meist aus großen Mengen domänenspezifischer Texte.",
+        "Unüberwachte Modelle benötigen keine Datenkennzeichnung und können daher mit sehr großen Datenmengen trainiert werden.",
+        "Die Modelle können präskriptiv eingesetzt werden, da sie potenzielle Ergebnisse für die Erstellung oder Bewertung von ESG-Berichten vorgeben."
+      ],
+      "tip": "Vortrainierte Open-Source-Modelle sind sofort einsetzbar.",
+      "images": {
+        "front": {
+          "full": "cards/full/a1-technology-front.webp",
+          "thumb": "cards/thumb/a1-technology-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a1-technology-back.webp",
+          "thumb": "cards/thumb/a1-technology-back.webp"
+        }
+      },
+      "pages": {
+        "front": 9,
+        "back": 10
+      }
+    },
+    {
+      "id": "a1-organisation",
+      "type": "organisation",
+      "archetypeId": "a1",
+      "title": "Organisation",
+      "points": [
+        "Fertig trainierte Modelle werden in der Regel mit einem hohen Maß an Automatisierung eingesetzt.",
+        "Für die Berichterstattung relevante Beteiligte müssen hierfür gebündelt und in den KI-gestützten Prozess integriert werden.",
+        "Es entsteht Mehrwert durch zusätzliche Einsichten zur Erstellung und/oder Prüfung von Nachhaltigkeitsberichten. Nachhaltigkeitsreporting ist in Unternehmen häufig als Querschnittsfunktion organisiert."
+      ],
+      "valueProposition": "Kostensenkung und neue Erkenntnisse im Nachhaltigkeitsreporting.",
+      "images": {
+        "front": {
+          "full": "cards/full/a1-organisation-front.webp",
+          "thumb": "cards/thumb/a1-organisation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a1-organisation-back.webp",
+          "thumb": "cards/thumb/a1-organisation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 11,
+        "back": 12
+      }
+    },
+    {
+      "id": "a1-activation",
+      "type": "activation",
+      "archetypeId": "a1",
+      "title": "Aktivierungsfrage",
+      "question": "Welche Nachhaltigkeitsberichte könnten schon heute von KI erstellt werden?",
+      "caseOverview": [
+        "AWS erstellt interaktive ESG-Berichte auf Basis von trainierten GenAI-Modellen",
+        "One Ocean Modelle ermöglichen es Unternehmen, ihre Auswirkungen auf die Ozeane basierend auf ihren bestehenden Nachhaltigkeitsberichten zu bewerten",
+        "Accern ermöglicht es Investor:innen, umfangreiche ESG-Berichte mithilfe von einfacher Low-Code-Technologie auf Datenlücken zu prüfen",
+        "Planted ermöglicht Ausschreibungsunterlagen mithilfe von GenAI automatisch auf ESG-Kriterien zu analysieren und passende Antwortentwürfe zu generieren"
+      ],
+      "images": {
+        "front": {
+          "full": "cards/full/a1-activation-front.webp",
+          "thumb": "cards/thumb/a1-activation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a1-activation-back.webp",
+          "thumb": "cards/thumb/a1-activation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 13,
+        "back": 14
+      }
+    },
+    {
+      "id": "a1-case-1",
+      "type": "case",
+      "archetypeId": "a1",
+      "title": "AWS",
+      "summary": "AWS nutzt Generative KI, um die Interpretation und Abfrage von ESG-Dokumenten zu vereinfachen und zu beschleunigen, sodass Unternehmen schnell und präzise auf Nachhaltigkeits-Insights zugreifen können. Die Lösung befähigt Organisationen, aus komplexen ESG-Berichten relevante Informationen zu extrahieren und dadurch fundiertere Entscheidungen für Nachhaltigkeitsstrategien und Compliance-Maßnahmen zu treffen.",
+      "takeaways": {
+        "technology": "AWS kombiniert Generative KI mit Services wie Amazon Textract und Comprehend, um unstrukturierte ESG-Daten effizient und skalierbar zu verarbeiten.",
+        "organisation": "Nutzerfreundliche Tools erleichtern die Zusammenarbeit zwischen Tech-Teams und Nachhaltigkeitsexpert:innen und fördern interdisziplinäre Arbeit.",
+        "sustainability": "Die Lösung adressiert den wachsenden Bedarf an skalierbarer, präziser ESG-Analyse und unterstützt transparente und nachhaltige Geschäftspraktiken."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a1-case-1-front.webp",
+          "thumb": "cards/thumb/a1-case-1-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a1-case-1-back.webp",
+          "thumb": "cards/thumb/a1-case-1-back.webp"
+        }
+      },
+      "pages": {
+        "front": 15,
+        "back": 16
+      }
+    },
+    {
+      "id": "a1-case-2",
+      "type": "case",
+      "archetypeId": "a1",
+      "title": "Accern",
+      "summary": "Accern nutzt Low-Code-NLP-Technologie, um ESG-Datenanalysen zu unterstützen. So können Investor:innen Informationslücken in ESG-Daten mit minimalem technischem Aufwand identifizieren und gezielt schließen. Dadurch lassen sich ESG-Insights schneller in Anlageentscheidungen integrieren.",
+      "takeaways": {
+        "technology": "Accerns Low-Code-Plattform vereinfacht den Einsatz von NLP für ESG-Daten. So lassen sich Einblicke aus unstrukturierten Reports gewinnen und Datenlücken gezielt schließen.",
+        "organisation": "Durch niedrigere technische Hürden können auch Nicht-Techniker:innen ESG-Analysen durchführen. Das fördert die breitere Nutzung KI-gestützter Erkenntnisse im Unternehmen.",
+        "sustainability": "Das Tool unterstützt verantwortungsvollere, fundiertere Investmentstrategien, indem es umfassendere und verlässlichere ESG-Informationen bereitstellt."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a1-case-2-front.webp",
+          "thumb": "cards/thumb/a1-case-2-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a1-case-2-back.webp",
+          "thumb": "cards/thumb/a1-case-2-back.webp"
+        }
+      },
+      "pages": {
+        "front": 17,
+        "back": 18
+      }
+    },
+    {
+      "id": "a1-case-3",
+      "type": "case",
+      "archetypeId": "a1",
+      "title": "Ocean Disclosure Initiative",
+      "summary": "Die Ocean Disclosure Initiative nutzt Generative KI, um Unternehmen dabei zu unterstützen, ihre Auswirkungen auf die Ozeane auf Basis von Daten aus Nachhaltigkeitsberichten zu erfassen und auszuwerten. Die Lösung liefert umsetzbare Erkenntnisse, die zu ozeanfreundlicheren Geschäftspraktiken beitragen können.",
+      "takeaways": {
+        "technology": "Generative KI verarbeitet ESG-Reports und extrahiert Erkenntnisse, die Unternehmen helfen ihren ökologischen Fußabdruck und den Einfluss auf Ozeane besser zu verstehen.",
+        "organisation": "Das Tool verbindet Nachhaltigkeitsexpert:innen und Tech-Teams und macht das Tracking von Ozeanwirkungen über verschiedene Organisationsebenen hinweg nutzbar und umsetzbar.",
+        "sustainability": "Die Initiative hilft Unternehmen, ihre Auswirkungen auf Meeresökosysteme systematisch zu bewerten und zu verringern und stärkt so nachhaltige Verantwortung für die Ozeane."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a1-case-3-front.webp",
+          "thumb": "cards/thumb/a1-case-3-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a1-case-3-back.webp",
+          "thumb": "cards/thumb/a1-case-3-back.webp"
+        }
+      },
+      "pages": {
+        "front": 19,
+        "back": 20
+      }
+    },
+    {
+      "id": "a1-case-4",
+      "type": "case",
+      "archetypeId": "a1",
+      "title": "Planted",
+      "summary": "Planted unterstützt Unternehmen dabei, ESG-Informationen für Ausschreibungen schnell bereitzustellen. Da Kund:innen und öffentliche Auftraggeber zunehmend CO₂- und Lieferkettendaten nachfragen, können relevante Nachweise (z. B. CO₂-Bilanz, Product Carbon Footprint, Zertifikate) zentral gepflegt und für Antworten konsistent genutzt werden.",
+      "takeaways": {
+        "technology": "Generative KI analysiert Ausschreibungsunterlagen, identifiziert ESG-Anforderungen und erstellt Antwortentwürfe aus einer internen Wissensdatenbank.",
+        "organisation": "Der Vertrieb kann Nachhaltigkeitsfragen schneller und konsistent beantworten, ohne zusätzlich die Nachhaltigkeitsabteilung einzuschalten.",
+        "sustainability": "Die Lösung beschleunigt die Erstellung prüfbarer ESG-Nachweise und stärkt Nachhaltigkeit als relevantes Vergabe- und Vertriebsargument."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a1-case-4-front.webp",
+          "thumb": "cards/thumb/a1-case-4-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a1-case-4-back.webp",
+          "thumb": "cards/thumb/a1-case-4-back.webp"
+        }
+      },
+      "pages": {
+        "front": 21,
+        "back": 22
+      }
+    },
+    {
+      "id": "a2-archetype",
+      "type": "archetype",
+      "archetypeId": "a2",
+      "title": "Erfassen und ermitteln strukturierter Nachhaltigkeitsdaten",
+      "intro": "Computer Vision ist ein Teilgebiet der KI, das es Computern ermöglicht, visuelle Daten zu „verstehen“ und darauf basierend Entscheidungen zu treffen. Dadurch können Algorithmen Informationen aus komplexem, zuvor schwer zugänglichem Bildmaterial extrahieren und in strukturierte Daten überführen. Anwendungsfälle reichen von der Analyse von Satellitenbildern bis zur Auswertung von Bildern aus Produktionsprozessen oder Prozessdiagrammen.",
+      "points": [],
+      "sustainabilityLink": "Ein besseres Verständnis für Nachhaltigkeits-Kennzahlen stärkt derzeit vor allem die ökologische Nachhaltigkeit, kann perspektivisch aber auch auf soziale Nachhaltigkeit ausgeweitet werden.",
+      "images": {
+        "front": {
+          "full": "cards/full/a2-archetype-front.webp",
+          "thumb": "cards/thumb/a2-archetype-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a2-archetype-back.webp",
+          "thumb": "cards/thumb/a2-archetype-back.webp"
+        }
+      },
+      "pages": {
+        "front": 23,
+        "back": 24
+      }
+    },
+    {
+      "id": "a2-technology",
+      "type": "technology",
+      "archetypeId": "a2",
+      "title": "Technologie",
+      "points": [
+        "Computer-Vision-Methoden ermöglichen die automatische Analyse von Bildern und die skalierbare Extraktion relevanter Informationen.",
+        "Für die erste Modellbildung sind große Mengen an Bilddaten nötig. Vortrainierte Modelle können in manchen Fällen den Datenbedarf stark reduzieren. Häufig ist manuelle Datenkennzeichnung nötig, um Modelle zu trainieren. Deshalb werden meist überwachte Lernverfahren eingesetzt.",
+        "Die Modelle werden überwiegend deskriptiv oder diagnostisch eingesetzt und dienen vor allem dazu, neue strukturierte Daten bereitzustellen."
+      ],
+      "tip": "Für viele industrielle Prozesse sind online bereits Open-Source-Trainingsdatensätze verfügbar.",
+      "images": {
+        "front": {
+          "full": "cards/full/a2-technology-front.webp",
+          "thumb": "cards/thumb/a2-technology-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a2-technology-back.webp",
+          "thumb": "cards/thumb/a2-technology-back.webp"
+        }
+      },
+      "pages": {
+        "front": 25,
+        "back": 26
+      }
+    },
+    {
+      "id": "a2-organisation",
+      "type": "organisation",
+      "archetypeId": "a2",
+      "title": "Organisation",
+      "points": [
+        "Die Lösung unterstützt Mitarbeitende, indem sie Bilddaten in nutzbare Informationen übersetzt. Dies beschleunigt Entscheidungen und spart repetitiven Arbeitsaufwand.",
+        "Für Training und Betrieb können auch externe Datensätze genutzt werden. Das macht den Lernprozess schneller und erweitert den Blick über interne Daten hinaus.",
+        "Teams erhalten schneller konkrete Insights für den Arbeitsalltag. Kund:innen profitieren indirekt durch bessere Qualität, Performance oder Nachweise.",
+        "Die Lösung kann intern als Analyse-Tool genutzt werden oder als Service, der Ergebnisse für Kund:innen bereitstellt."
+      ],
+      "valueProposition": "Aus Bildern werden schnell messbare Daten, die Prozesse vereinfachen und Nachhaltigkeitsleistungen transparent machen.",
+      "images": {
+        "front": {
+          "full": "cards/full/a2-organisation-front.webp",
+          "thumb": "cards/thumb/a2-organisation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a2-organisation-back.webp",
+          "thumb": "cards/thumb/a2-organisation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 27,
+        "back": 28
+      }
+    },
+    {
+      "id": "a2-activation",
+      "type": "activation",
+      "archetypeId": "a2",
+      "title": "Aktivierungsfrage",
+      "question": "Wie könnte Ihr Unternehmen Computer Vision einsetzen, um Umweltauswirkungen in Prozessen sichtbar und messbar zu machen?",
+      "caseOverview": [
+        "OroraTech wertet thermale Satellitenbilder mit KI aus, um Waldbrände früh zu erkennen und die Gebiete nahezu in Echtzeit zu überwachen.",
+        "SUEZ lokalisiert Leckagen in Trinkwassernetzen mithilfe von KI-Analysen von Satellitenbildern und Geoinformationssystem-Karten (GIS).",
+        "Reezocar standardisiert die Zustandsprüfung von Gebrauchtwagen, um Online-Käufe transparenter und verlässlicher zu machen.",
+        "Steinert kombiniert Hyperspectral Imaging (HSI) mit KI, um Materialien sehr präzise zu trennen und Closed-Loop-Recycling zu ermöglichen."
+      ],
+      "images": {
+        "front": {
+          "full": "cards/full/a2-activation-front.webp",
+          "thumb": "cards/thumb/a2-activation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a2-activation-back.webp",
+          "thumb": "cards/thumb/a2-activation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 29,
+        "back": 30
+      }
+    },
+    {
+      "id": "a2-case-1",
+      "type": "case",
+      "archetypeId": "a2",
+      "title": "OroaTech",
+      "summary": "OroraTech ermöglicht frühzeitige Erkennung, Echtzeit-Monitoring und Schadensanalyse von Waldbränden mithilfe von Daten aus über 20 Satellitenquellen. Die Daten werden mit Algorithmen ausgewertet und liefern neue Erkenntnisse für den Waldschutz. Über eine Plattform bietet das Unternehmen Risiko-Prognosen, Sofortalarme und kontinuierliches Monitoring für über 160 Millionen Hektar Wald weltweit.",
+      "takeaways": {
+        "technology": "OroraTech erfasst aktuell pro Waldgebiet mehrere Überflüge pro Tag mit etwa zehn Satelliten im Orbit. Dadurch stehen ausreichend Daten zur Verfügung, die automatisiert analysiert und bewertet werden.",
+        "organisation": "Das Unternehmen kombiniert Daten aus eigenen Satelliten mit automatisierter Bildanalyse und bietet daraus resultierende Services direkt für Kund:innen an. Das Fallbeispiel zeigt damit den anwendungsnahen Nutzen neuer Bilddaten.",
+        "sustainability": "Früherkennung und Prävention von Waldbränden schützt Biodiversität und Lebensräume, reduziert Risiken für Gemeinden und kann CO₂-Emissionen durch Großbrände verringern."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a2-case-1-front.webp",
+          "thumb": "cards/thumb/a2-case-1-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a2-case-1-back.webp",
+          "thumb": "cards/thumb/a2-case-1-back.webp"
+        }
+      },
+      "pages": {
+        "front": 31,
+        "back": 32
+      }
+    },
+    {
+      "id": "a2-case-2",
+      "type": "case",
+      "archetypeId": "a2",
+      "title": "SUEZ",
+      "summary": "SUEZ nutzt die satellitenbasierte Leckage-Erkennung von ASTERRA, um Lecks in Trinkwassernetzen präzise zu lokalisieren. KI-Algorithmen werten Satellitenbilder aus und legen die Ergebnisse über Geoinformationssystem-Karten, sodass Versorger Leckagen schneller finden und ihre Reduktionsziele effizienter erreichen.",
+      "takeaways": {
+        "technology": "Das System verwendet Synthetic Aperture Radar (SAR) und verarbeitet spektrale Satellitendaten mit proprietären Algorithmen. Die Analyse isoliert Signale von „Trinkwasser im Boden“ und liefert konkrete Hinweise auf mögliche Leckagen (z. B. Positionen und Prioritäten für Reparaturen).",
+        "organisation": "SUEZ bietet die Satelliten-Lecksuche als Service für Wasserversorger an, inklusive app-basierter Karten zur Einsatzsteuerung. Feldteams prüfen anschließend vor Ort und priorisieren ihre Ressourcen gezielter.",
+        "sustainability": "Durch die Satellitenanalyse können Teams pro Tag deutlich mehr Lecks identifizieren, was Wasserverlust deutlich reduziert.sendere und verlässlichere ESG-Informationen bereitstellt."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a2-case-2-front.webp",
+          "thumb": "cards/thumb/a2-case-2-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a2-case-2-back.webp",
+          "thumb": "cards/thumb/a2-case-2-back.webp"
+        }
+      },
+      "pages": {
+        "front": 33,
+        "back": 34
+      }
+    },
+    {
+      "id": "a2-case-3",
+      "type": "case",
+      "archetypeId": "a2",
+      "title": "Reezocar",
+      "summary": "Reezocar nutzt Computer Vision, um den Zustand von Gebrauchtwagen präzise zu bewerten und den Bewertungsprozess zu standardisieren. Das beschleunigt Entscheidungen für Käufer:innen und Verkäufer:innen und erhöht die Transparenz im Wiederverkaufsmarkt in Frankreich.",
+      "takeaways": {
+        "technology": "Das System analysiert Bilder von Fahrzeugen und erkennt Abnutzung, Schäden und weitere Zustandsmerkmale. Die automatisierte Bewertung erhöht die Genauigkeit und reduziert den Aufwand manueller Inspektionen.",
+        "organisation": "Durch skalierbare KI-Infrastruktur (z. B. in Kooperation mit AWS) lässt sich die Bewertung nahtlos in Online-Marktplätze integrieren. Das stärkt Vertrauen und verkürzt Verkaufs- und Abwicklungsprozesse.",
+        "sustainability": "Eine bessere Wiedervermarktung verlängert die Nutzungsdauer von Fahrzeugen. Damit trägt der Use Case zu Ressourceneffizienz in der Automobilbranche bei."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a2-case-3-front.webp",
+          "thumb": "cards/thumb/a2-case-3-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a2-case-3-back.webp",
+          "thumb": "cards/thumb/a2-case-3-back.webp"
+        }
+      },
+      "pages": {
+        "front": 35,
+        "back": 36
+      }
+    },
+    {
+      "id": "a2-case-4",
+      "type": "case",
+      "archetypeId": "a2",
+      "title": "Steinert",
+      "summary": "Steinert ermöglicht Recyclinganlagen, komplexe Stoffströme wie schwarze Kunststoffe oder Legierungen präziser zu trennen und damit hochwertige Rezyklate herzustellen. Dafür werden Materialeigenschaften in Echtzeit erkannt und Sortierentscheidungen automatisiert umgesetzt.",
+      "takeaways": {
+        "technology": "Hyperspectral Imaging (HSI) wird mit KI kombiniert, sodass neben Farbe auch materialspezifische „Signaturen“ erkannt werden. Die KI steuert Sortieraggregate (z. B. Druckluftdüsen) und erreicht so sehr hohe Sortenreinheiten.",
+        "organisation": "Die Sortierung wird stärker datengetrieben, wodurch Anlagen schneller auf neue Material- und Verpackungsvarianten angepasst werden können. Qualitätsteams arbeiten mit standardisierten Sortierrezepten statt manueller Nachjustierung.",
+        "sustainability": "Höhere Reinheiten ermöglichen Closed-Loop-Recycling statt Downcycling und stärken damit Kreislaufwirtschaft."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a2-case-4-front.webp",
+          "thumb": "cards/thumb/a2-case-4-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a2-case-4-back.webp",
+          "thumb": "cards/thumb/a2-case-4-back.webp"
+        }
+      },
+      "pages": {
+        "front": 37,
+        "back": 38
+      }
+    },
+    {
+      "id": "a3-archetype",
+      "type": "archetype",
+      "archetypeId": "a3",
+      "title": "Individuelle Beratung für soziale Wirkung",
+      "intro": "Die Technologien Natural Language Processing (NLP) und Generativer KI können Unternehmen dabei unterstützen, hoch individualisierte und spezifische Beratung sowie Informationen für Kund:innen bereitzustellen. Das ermöglicht neue und verbesserte Interaktionen, die die Nutzbarkeit und den gesellschaftlichen Wert von Produkten erhöhen.",
+      "points": [],
+      "sustainabilityLink": "Vor allem die ökonomische und soziale Dimension von Nachhaltigkeit wird durch individualisierte Kundeninteraktionen beeinflusst.",
+      "images": {
+        "front": {
+          "full": "cards/full/a3-archetype-front.webp",
+          "thumb": "cards/thumb/a3-archetype-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a3-archetype-back.webp",
+          "thumb": "cards/thumb/a3-archetype-back.webp"
+        }
+      },
+      "pages": {
+        "front": 39,
+        "back": 40
+      }
+    },
+    {
+      "id": "a3-technology",
+      "type": "technology",
+      "archetypeId": "a3",
+      "title": "Technologie",
+      "points": [
+        "Die Fähigkeit von NLP und generativer KI, große Mengen an Text zu verarbeiten und individuell zu antworten, kann skalierbar auf die individuellen Ansprüche von Nutzer:innen eingehen.",
+        "Sowohl NLP als auch generative KI benötigen große Mengen an Text als Trainingsdaten. Vortrainierte Modelle können diesen Bedarf stark reduzieren.",
+        "Das Fine-Tuning von vortrainierten Modellen findet unsupervised statt und benötigt keine zusätzlichen Datenlabels.",
+        "Die generative Natur dieser Technologien führt zu stark präskriptiven Anwendungsfällen und benötigt Menschen nur noch zur Überwachung."
+      ],
+      "tip": "Geeignet, wenn KI individuelle Empfehlungen oder gezieltes Feedback für Nutzer:innen bereitstellen soll.",
+      "images": {
+        "front": {
+          "full": "cards/full/a3-technology-front.webp",
+          "thumb": "cards/thumb/a3-technology-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a3-technology-back.webp",
+          "thumb": "cards/thumb/a3-technology-back.webp"
+        }
+      },
+      "pages": {
+        "front": 41,
+        "back": 42
+      }
+    },
+    {
+      "id": "a3-organisation",
+      "type": "organisation",
+      "archetypeId": "a3",
+      "title": "Organisation",
+      "points": [
+        "Oft werden generative KI-Systeme schon vollkommen autonom eingesetzt, in besonders kritischen Prozessen wird aber noch ein Mensch zur Kontrolle benötigt.",
+        "Sowohl im Trainingsprozess als auch bei der Anwendung in Kundenschnittstellen sind interne und geteilte Daten nötig.",
+        "Individuellere Interaktionen mit Kund:innen können den Mehrwert von Produkten und Services erheblich steigern und sich positiv auf das Umsatzwachstum auswirken.",
+        "Bisher werden individuelle Interaktionen mit Kund:innen vor allem im Marketing und in Services verwendet. Allerdings nehmen auch interne Use Cases stark zu."
+      ],
+      "valueProposition": "Kostensenkung und neue Erkenntnisse im Nachhaltigkeitsreporting.",
+      "images": {
+        "front": {
+          "full": "cards/full/a3-organisation-front.webp",
+          "thumb": "cards/thumb/a3-organisation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a3-organisation-back.webp",
+          "thumb": "cards/thumb/a3-organisation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 43,
+        "back": 44
+      }
+    },
+    {
+      "id": "a3-activation",
+      "type": "activation",
+      "archetypeId": "a3",
+      "title": "Aktivierungsfrage",
+      "question": "Wie könnten Ihre Kund:innen von personalisierter Beratung durch KI profitieren?",
+      "caseOverview": [
+        "Octopus Energy nutzt KI, um personalisierte Antworten im Kund:innenservice vorzubereiten und so Zufriedenheit und Inklusion zu verbessern.",
+        "Fluid Topics verwandelt statische Inhalte mithilfe von Generativer KI in personalisierte und kontextbezogene Informationen für B2B-Kund:innen.",
+        "Die Stadt Boston nutzt Generative KI, um Fahrradinfrastruktur anschaulich zu visualisieren und Bürger:innen frühzeitig in die Planung einzubinden.",
+        "Deep Care bietet mit KI-gestütztem Feedback am Arbeitsplatz personalisierte Gesundheitsprävention und stärkt so Wohlbefinden und Gesundheit."
+      ],
+      "images": {
+        "front": {
+          "full": "cards/full/a3-activation-front.webp",
+          "thumb": "cards/thumb/a3-activation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a3-activation-back.webp",
+          "thumb": "cards/thumb/a3-activation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 45,
+        "back": 46
+      }
+    },
+    {
+      "id": "a3-case-1",
+      "type": "case",
+      "archetypeId": "a3",
+      "title": "Octopus Energy",
+      "summary": "Octopus Energy nutzt einen Kund:innen-Service-Chatbot auf Basis eines Large Language Models (LLM), das auf Unternehmensinformationen und Richtlinien zugreifen kann, um Antworten auf Kund:innen-Mails zu formulieren. Die Antworten werden anschließend von Mitarbeitenden überprüft. Dadurch stieg die Kund:innen-Zufriedenheit von 65 % bei rein menschlicher Bearbeitung auf nun 80 %.",
+      "takeaways": {
+        "technology": "Ein lokal gehostetes und auf Unternehmenswissen feinjustiertes Large Language Model (LLM) formuliert Antwortentwürfe für den Kund:innenservice. So können auch vertrauliche Informationen sicher in den Anwendungsfall eingebunden werden.",
+        "organisation": "Die KI unterstützt Mitarbeitende im Prozess und verbessert vor allem die Qualität der Interaktion mit Kund:innen. Der Mehrwert liegt daher vor allem in höherer Zufriedenheit als in reiner Effizienzsteigerung.",
+        "sustainability": "Durch individuellere Antworten auf Kund:innenanfragen fördert Octopus Energy Inklusion und Fairness im Kund:innenservice."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a3-case-1-front.webp",
+          "thumb": "cards/thumb/a3-case-1-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a3-case-1-back.webp",
+          "thumb": "cards/thumb/a3-case-1-back.webp"
+        }
+      },
+      "pages": {
+        "front": 47,
+        "back": 48
+      }
+    },
+    {
+      "id": "a3-case-2",
+      "type": "case",
+      "archetypeId": "a3",
+      "title": "Fluid Topics",
+      "summary": "Fluid Topics hat eine Plattform entwickelt, die Generative KI nutzt, um die Dokumentation der Produktinformationen von B2B-Kund:innen kontextbezogen und handlungsrelevante bereitzustellen. Indem statische Inhalte in dynamische, personalisierte Nutzererlebnisse überführt werden, verbessert die Lösung Entscheidungsfindung und Interaktion der Mitarbeitenden.",
+      "takeaways": {
+        "technology": "Die Plattform nutzt generative KI, um Produktinformationen der Kund:innen dynamisch zu analysieren, einzuordnen und nutzerspezifisch aufzubereiten. So entstehen personalisierte Informationen in Echtzeit.",
+        "organisation": "Statische Dokumente werden zu interaktiven Wissensbasen, was die Nutzererfahrung im B2B-Bereich verbessert. Das fördert effizientere Abläufe, fundiertere Entscheidungen und höhere Kundenzufriedenheit.",
+        "sustainability": "Durch die bessere Nutzung bestehender Inhalte und weniger redundante Dokumentation unterstützt Fluid Topics Ressourceneffizienz."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a3-case-2-front.webp",
+          "thumb": "cards/thumb/a3-case-2-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a3-case-2-back.webp",
+          "thumb": "cards/thumb/a3-case-2-back.webp"
+        }
+      },
+      "pages": {
+        "front": 49,
+        "back": 50
+      }
+    },
+    {
+      "id": "a3-case-3",
+      "type": "case",
+      "archetypeId": "a3",
+      "title": "Stadt Boston",
+      "summary": "Die Stadt Boston nutzt Generative KI, um an Kopenhagen orientierte Fahrradinfrastruktur auf dem Stadtplan zu visualisieren. Dieser Ansatz fördert Bürger:innenbeteiligung und Akzeptanz, indem diese aktiv in den Planungsprozess einbezogen werden.",
+      "takeaways": {
+        "technology": "Generative KI legt geplante Fahrradinfrastruktur auf die Stadtkarte von Boston und erzeugt realitätsnahe Visualisierungen.",
+        "organisation": "Durch KI-generierte Visualisierungen werden die Pläne leichter für Bürger:innen zugänglich. So werden diese stärker in die Planung eingebunden. Dies fördert Teilhabe, schafft Vertrauen und erhöht die Akzeptanz von Stadtentwicklungsprojekten.",
+        "sustainability": "Die Initiative unterstützt nachhaltige urbane Mobilität, indem sie Radverkehr attraktiver macht und Emissionen reduziert."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a3-case-3-front.webp",
+          "thumb": "cards/thumb/a3-case-3-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a3-case-3-back.webp",
+          "thumb": "cards/thumb/a3-case-3-back.webp"
+        }
+      },
+      "pages": {
+        "front": 51,
+        "back": 52
+      }
+    },
+    {
+      "id": "a3-case-4",
+      "type": "case",
+      "archetypeId": "a3",
+      "title": "Deep Care",
+      "summary": "Deep Care nutzt mit „Isa“ einen KI-gestützten Gesundheitscoach, der Mitarbeitende am Bildschirmarbeitsplatz kontinuierlich begleitet und individuelles Feedback zu gesundem Verhalten gibt. Die Lösung analysiert Arbeitsweise und Arbeitsumgebung direkt am Platz und unterstützt so personalisierte Prävention im Büro, im Homeoffice und in hybriden Arbeitsmodellen.",
+      "takeaways": {
+        "technology": "Das System „Isa“ nutzt einen Sensor am Schreibtisch, der die Körperhaltung analysiert. KI erkennt ungesunde Muster und gibt individuelles Feedback (Coaching) direkt an den Nutzer.",
+        "organisation": "Die Lösung ersetzt punktuelle Gesundheitstage durch kontinuierliches, personalisiertes Coaching im Arbeitsalltag. Da keine IT-Integration nötig ist und das System sofort einsetzbar ist, lässt es sich leicht einführen.",
+        "sustainability": "Förderung von Gesundheit, Ergonomie und Wohlbefinden der Mitarbeitenden. Gleichzeitig kann durch weniger belastungsbedingte Ausfälle und produktiveres Arbeiten auch ökonomischer Nutzen geschaffen werden."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a3-case-4-front.webp",
+          "thumb": "cards/thumb/a3-case-4-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a3-case-4-back.webp",
+          "thumb": "cards/thumb/a3-case-4-back.webp"
+        }
+      },
+      "pages": {
+        "front": 53,
+        "back": 54
+      }
+    },
+    {
+      "id": "a4-archetype",
+      "type": "archetype",
+      "archetypeId": "a4",
+      "title": "Auswirkungen auf Nachhaltigkeit vorhersagen",
+      "intro": "Die Technologie des tabellarischen Machine Learnings (ML) kann in ihrer einfachen Form genutzt werden, um bislang nicht zugängliche Nachhaltigkeitskennzahlen innerhalb eines Unternehmens zu prognostizieren. Dadurch werden tiefere Einblicke in bestehende betriebliche Abläufe ermöglicht und eine effektive Berichterstattung von Nachhaltigkeitskennzahlen unterstützt. Typische Anwendungsfälle umfassen unter anderem den Stromverbrauch, den Materialverbrauch sowie CO2-Emissionen.",
+      "points": [],
+      "sustainabilityLink": "Ein verbessertes Verständnis der Nachhaltigkeitskennzahlen interner Prozesse fördert derzeit insbesondere die ökologische Nachhaltigkeit, kann jedoch perspektivisch auch auf Dimensionen der sozialen Nachhaltigkeit ausgeweitet werden.",
+      "images": {
+        "front": {
+          "full": "cards/full/a4-archetype-front.webp",
+          "thumb": "cards/thumb/a4-archetype-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a4-archetype-back.webp",
+          "thumb": "cards/thumb/a4-archetype-back.webp"
+        }
+      },
+      "pages": {
+        "front": 55,
+        "back": 56
+      }
+    },
+    {
+      "id": "a4-technology",
+      "type": "technology",
+      "archetypeId": "a4",
+      "title": "Technologie",
+      "points": [
+        "Der unternehmensweite Einsatz von tabellarischem ML schafft signifikanten Mehrwert durch eine schnelle Entwicklung und einfache Integration in operative Geschäftsprozesse.",
+        "Für das Training und den produktiven Einsatz der meist vergleichsweise einfachen Modelle sind häufig bereits kleinere Mengen strukturierter Daten ausreichend.",
+        "Zur Reduktion der Trainingskomplexität sowie zur Steigerung der Modellgüte bei begrenzter Datenverfügbarkeit bietet sich der Einsatz von Supervised Learning an.",
+        "Die Prognose von Unternehmens-KPIs ist inhärent prädiktiv und kann einen Beitrag zur Nachhaltigkeitsdiskussion leisten."
+      ],
+      "tip": "Diese Anwendungsfälle sind aufgrund der geringen benötigten Daten oft schnell einführbar.",
+      "images": {
+        "front": {
+          "full": "cards/full/a4-technology-front.webp",
+          "thumb": "cards/thumb/a4-technology-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a4-technology-back.webp",
+          "thumb": "cards/thumb/a4-technology-back.webp"
+        }
+      },
+      "pages": {
+        "front": 57,
+        "back": 58
+      }
+    },
+    {
+      "id": "a4-organisation",
+      "type": "organisation",
+      "archetypeId": "a4",
+      "title": "Organisation",
+      "points": [
+        "Als Datenlieferanten unterstützen diese Systeme menschliche Entscheidungsprozesse, indem sie eine datenbasierte Grundlage für Diskussionen und nachhaltige Entscheidungen bereitstellen.",
+        "Häufig genügen betriebsinterne Daten und Ressourcen, um interne KPIs zu prognostizieren. Für Unternehmen erhöht dies die Umsetzbarkeit solcher Fallbeispiele erheblich.",
+        "Oft beschränkt sich der Nutzen der bereitgestellten Daten auf reine Effizienzgewinne.",
+        "Die Integration neuer Daten zur Erhebung von Nachhaltigkeitskennzahlen konzentriert sich aktuell vor allem auf operative Abteilungen und generiert dort Wertbeiträge durch Transparenz."
+      ],
+      "valueProposition": "Informationen über Ressourcenverbräuche und Transparenz nehmen in der Relevanz auch entlang der Lieferkette zu.",
+      "images": {
+        "front": {
+          "full": "cards/full/a4-organisation-front.webp",
+          "thumb": "cards/thumb/a4-organisation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a4-organisation-back.webp",
+          "thumb": "cards/thumb/a4-organisation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 59,
+        "back": 60
+      }
+    },
+    {
+      "id": "a4-activation",
+      "type": "activation",
+      "archetypeId": "a4",
+      "title": "Aktivierungsfrage",
+      "question": "Welche Produktionsdaten könnten Sie in Ihrem Unternehmen prognostizieren?",
+      "caseOverview": [
+        "ABB optimiert basierend auf maschinellem Lernen Energiebilanzen und Verbrauchsprognosen die Ressourceneffizienz und Kosten bei Industriekunden.",
+        "Maersk nutzt KI-gestützte Emissions-Dashboards und Szenario-Planung zur Dekarbonisierung globaler Lieferketten.",
+        "Xylem sichert die Wasserinfrastruktur durch die proaktive Überwachung von Abwasserpegel und steigert so die Systemeffizienz.",
+        "Brammibal‘s Donuts nutzt KI-basierte Absatzplanung von Foodtracks, um Lebensmittelverschwendung vorzubeugen."
+      ],
+      "images": {
+        "front": {
+          "full": "cards/full/a4-activation-front.webp",
+          "thumb": "cards/thumb/a4-activation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a4-activation-back.webp",
+          "thumb": "cards/thumb/a4-activation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 61,
+        "back": 62
+      }
+    },
+    {
+      "id": "a4-case-1",
+      "type": "case",
+      "archetypeId": "a4",
+      "title": "ABB",
+      "summary": "ABB optimiert bei UPM-Kymmene mittels maschinellen Lernens den Energieverbrauch und die Ressourcenplanung. Durch Echtzeit-Prozessdaten werden Bilanzen für Strom, Dampf, Wasser und Gas erstellt. Der Abgleich von Prognosen mit Eigenkapazitäten und Verträgen steigert Effizienz, Verfügbarkeit sowie Handelsfähigkeit und sichert Kosteneinsparungen sowie Compliance.",
+      "takeaways": {
+        "technology": "Im Rahmen des UPM-Use-Case fokussieren sich die eingesetzten ML-Modelle speziell auf die Prädiktion und das Erkennen von Anomalien auf Basis von Echtzeitdaten.",
+        "organisation": "Abhängig von Anlagengröße und Vernetzungsgrad dienen die Daten entweder als Basis für Management-Entscheidungen oder werden direkt zur automatischen Anpassung von Energieeinkauf und Produktion genutzt.",
+        "sustainability": "Durch die deutlich gesteigerte Transparenz des Energiebedarfs in Echtzeit und die Verknüpfung mit Produktions- und Einkaufskapazitäten werden ökologische sowie ökonomische Potenziale voll ausgeschöpft."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a4-case-1-front.webp",
+          "thumb": "cards/thumb/a4-case-1-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a4-case-1-back.webp",
+          "thumb": "cards/thumb/a4-case-1-back.webp"
+        }
+      },
+      "pages": {
+        "front": 63,
+        "back": 64
+      }
+    },
+    {
+      "id": "a4-case-2",
+      "type": "case",
+      "archetypeId": "a4",
+      "title": "Maersk",
+      "summary": "Maersk nutzt fortschrittliche KI-Tools zur Emissionsprognose und visualisiert diese in einem umfassenden Dashboard. Die daraus gewonnenen, direkt umsetzbaren Erkenntnisse ermöglichen es dem Management, fundierte Entscheidungen zur Emissionsreduktion zu treffen und den Betrieb konsequent an den Nachhaltigkeitszielen auszurichten.",
+      "takeaways": {
+        "technology": "Maersks KI-Prognosemodelle schätzen Emissionen über alle Betriebsabläufe hinweg. Ein dynamisches Echtzeit-Dashboard visualisiert diese Daten und ermöglicht Szenarioplanungen für effektive Nachhaltigkeit.",
+        "organisation": "Das Emissions-Dashboard ermöglicht datenbasierte Management-Entscheidungen in Echtzeit. Je nach Komplexität des Betriebs unterstützen diese Daten die strategische Planung oder steuern automatisierte CO₂-Reduzierungen.",
+        "sustainability": "Durch Transparenz und direkt umsetzbare Erkenntnisse stärkt Maersk die ökologische Verantwortung. Dies fördert einen nachhaltigen Betrieb, senkt Emissionen und gewährleistet die regulatorische Compliance."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a4-case-2-front.webp",
+          "thumb": "cards/thumb/a4-case-2-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a4-case-2-back.webp",
+          "thumb": "cards/thumb/a4-case-2-back.webp"
+        }
+      },
+      "pages": {
+        "front": 65,
+        "back": 66
+      }
+    },
+    {
+      "id": "a4-case-3",
+      "type": "case",
+      "archetypeId": "a4",
+      "title": "Xylem",
+      "summary": "Xylem setzt Modelle mit tabellarischem Maschinellen Lernen ein, um Abwasserstände für Unternehmen und Kommunen zu überwachen und vorherzusagen. Diese Technologie ermöglicht ein proaktives Management von Abwasserkreisläufen: Präventive Maßnahmen verhindern Überläufe und steigern die Systemeffizienz erheblich.",
+      "takeaways": {
+        "technology": "Mittels tabelarischem Maschinellen Lernen prognostiziert Xylem Abwasserdurchflüsse und identifiziert Echtzeitrisiken. Diese Vorhersagekraft erlaubt rechtzeitige Eingriffe und optimiert die operative Steuerung.",
+        "organisation": "Erkenntnisse aus maschinellem Lernen im Abwassermanagement unterstützen Xylem bei der Ressourcenoptimierung und Risikominimierung für Umweltschäden. Dies verbessert sowohl die Instandhaltung als auch die langfristige Infrastrukturplanung.",
+        "sustainability": "Vorausschauendes Abwassermonitoring minimiert Verschmutzung und Ressourcenverlust. Das resultiert in einem nachhaltigen Wassermanagement sowie einer robusteren Infrastruktur."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a4-case-3-front.webp",
+          "thumb": "cards/thumb/a4-case-3-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a4-case-3-back.webp",
+          "thumb": "cards/thumb/a4-case-3-back.webp"
+        }
+      },
+      "pages": {
+        "front": 67,
+        "back": 68
+      }
+    },
+    {
+      "id": "a4-case-4",
+      "type": "case",
+      "archetypeId": "a4",
+      "title": "Brammibal‘s Donuts",
+      "summary": "Brammibal’s Donuts nutzt KI-basierte Prognosemodelle, um die tägliche Nachfrage nach Backwaren in seinen Filialen vorherzusagen. Durch die Analyse von Verkaufsdaten sowie zeitlicher und lokaler Einflussfaktoren können Produktionsmengen präziser geplant werden. So werden Lebensmittelabfälle reduziert, Ressourcen geschont und die Effizienz der Produktions- und Bestellprozesse verbessert.",
+      "takeaways": {
+        "technology": "Mittels KI-basierter Forecasting-Modelle prognostiziert Brammibal’s Donuts die tägliche Nachfrage nach Backwaren auf Filialebene. Die Vorhersagen unterstützen eine präzisere Produktions- und Mengenplanung",
+        "organisation": "Die KI-gestützten Empfehlungen unterstützen Filialleiter:innen bei der Bestellplanung und verbessern die Abstimmung zwischen Produktion, Filialen und Lieferketten.",
+        "sustainability": "Durch genauere Bedarfsprognosen werden Überproduktion und Lebensmittelabfälle reduziert. Dies spart Rohstoffe, Energie und senkt die Umweltbelastung."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a4-case-4-front.webp",
+          "thumb": "cards/thumb/a4-case-4-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a4-case-4-back.webp",
+          "thumb": "cards/thumb/a4-case-4-back.webp"
+        }
+      },
+      "pages": {
+        "front": 69,
+        "back": 70
+      }
+    },
+    {
+      "id": "a5-archetype",
+      "type": "archetype",
+      "archetypeId": "a5",
+      "title": "Optimierungsempfehlungen für operative Nachhaltigkeit",
+      "intro": "Tabellarisches Maschinelles Lernen kann genutzt werden, um die Nachhaltigkeitsauswirkungen laufender Unternehmensprozesse auf aggregierter Ebene unmittelbar vorherzusagen. Hierdurch gewinnen Unternehmen Erkenntnisse über ihre Nachhaltigkeit, die gegenseitige Abhängigkeiten berücksichtigen und eine ganzheitliche Bewertung der Auswirkungen von Prozessänderungen ermöglichen.",
+      "points": [],
+      "sustainabilityLink": "Eine ganzheitlich bewertete, aber in einzelnen Prozessen verwurzelte Transparenz der unternehmerischen Nachhaltigkeit ermöglicht die fundierte Diskussion über ökonomische und ökologische Nachhaltigkeit.",
+      "images": {
+        "front": {
+          "full": "cards/full/a5-archetype-front.webp",
+          "thumb": "cards/thumb/a5-archetype-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a5-archetype-back.webp",
+          "thumb": "cards/thumb/a5-archetype-back.webp"
+        }
+      },
+      "pages": {
+        "front": 71,
+        "back": 72
+      }
+    },
+    {
+      "id": "a5-technology",
+      "type": "technology",
+      "archetypeId": "a5",
+      "title": "Technologie",
+      "points": [
+        "Bestehendes Know-how in tabellarischem maschinellem Lernen lässt sich direkt für schnelle Resultate sowie zur Bereitstellung unternehmensweiter Einblicke nutzen.",
+        "Um einfachere Modelle maschinellen Lernens zu nutzen, reichen oft geringere Datenmengen aus. Diese müssen jedoch ein hinreichendes Abbild des Unternehmens liefern.",
+        "Um die Komplexität des Anwendungsfalls gering zu halten, kann Supervised Learning auf dem erweiterten Datensatz eingesetzt werden.",
+        "Die analytische Dimension bleibt auch auf Unternehmensebene vorausschauend. Jedoch ändern sich die Tragweite der gewonnenen Erkenntnisse und die managementbezogenen Auswirkungen erheblich."
+      ],
+      "tip": "Die Integration von Prozessdaten kann neben der Vorhersage von Kennzahlen auch Verbesserungen empfehlen",
+      "images": {
+        "front": {
+          "full": "cards/full/a5-technology-front.webp",
+          "thumb": "cards/thumb/a5-technology-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a5-technology-back.webp",
+          "thumb": "cards/thumb/a5-technology-back.webp"
+        }
+      },
+      "pages": {
+        "front": 73,
+        "back": 74
+      }
+    },
+    {
+      "id": "a5-organisation",
+      "type": "organisation",
+      "archetypeId": "a5",
+      "title": "Organisation",
+      "points": [
+        "Während der Anwendungsfall weiterhin die menschliche Entscheidungsfindung unterstützt, verstärkt die erweiterte Nachhaltigkeitsperspektive diese und steigert so die ökologische Wirkung.",
+        "Interne Daten sind für den Erfolg dieses Anwendungsfalls entscheidend. Die größte Herausforderung liegt dabei in einer konsistenten Datenbasis.",
+        "Eine ganzheitliche Nachhaltigkeitsbewertung wandelt diese Anwendungsfälle von reiner Optimierung zu sichtbarer Wertschöpfung.",
+        "Während die effektivsten Anwendungsfälle alle Geschäftsbereiche umfassen, liegt der Fokus primär auf den operativen Abläufen und der Logistik."
+      ],
+      "valueProposition": "Die Integration von Prozessdaten kann neben der Vorhersage von KPIs auch Verbesserungen vorschlagen.",
+      "images": {
+        "front": {
+          "full": "cards/full/a5-organisation-front.webp",
+          "thumb": "cards/thumb/a5-organisation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a5-organisation-back.webp",
+          "thumb": "cards/thumb/a5-organisation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 75,
+        "back": 76
+      }
+    },
+    {
+      "id": "a5-activation",
+      "type": "activation",
+      "archetypeId": "a5",
+      "title": "Aktivierungsfrage",
+      "question": "Wo im Unternehmen würden Ihnen Empfehlungen für effizientere Prozesse weiterhelfen?",
+      "caseOverview": [
+        "Diehl Metering nutzt KI-Leckageerkennung zur Analyse von Verbrauchsmustern, um Wasserverluste in Kommunen präventiv zu minimieren.",
+        "Heineken x Siemens reduzieren CO2-Emissionen durch KI-Energiemanagement, um bis 2025 einen Netto-Null-Emissions-Betrieb zu erreichen.",
+        "Trapeze Group optimiert den ÖPNV in Singapur durch prädiktive KI-Wartung, was Kraftstoff einspart, und die Fahrzeuglebensdauer verlängert.",
+        "Manex AI steigert die Ressourceneffizienz in der Fertigung durch KI-basierte Defekterkennung und optimierte Teststrategien."
+      ],
+      "images": {
+        "front": {
+          "full": "cards/full/a5-activation-front.webp",
+          "thumb": "cards/thumb/a5-activation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a5-activation-back.webp",
+          "thumb": "cards/thumb/a5-activation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 77,
+        "back": 78
+      }
+    },
+    {
+      "id": "a5-case-1",
+      "type": "case",
+      "archetypeId": "a5",
+      "title": "Diel Metering",
+      "summary": "Diehl Metering setzt KI-Technologie ein, um Wasserlecks vorherzusagen und zu erkennen, wodurch Kommunen und Unternehmen Probleme frühzeitig identifizieren und Wasserverluste vermeiden können. Diese Lösung verbessert die Ressourceneffizienz und unterstützt ein nachhaltiges Wassermanagement.",
+      "takeaways": {
+        "technology": "Die Software von Diehl Metering nutzt KI-Algorithmen, um Wassernutzungsmuster zu analysieren und Anomalien zu erkennen, die auf Lecks hindeuten. Einblicke in Echtzeit ermöglichen dabei proaktive Interventionen.",
+        "organisation": "Die Lösung lässt sich nahtlos in bestehende Zählersysteme integrieren und liefert Versorgungsunternehmen sowie Kommunen verwertbare Daten, um die Instandhaltung zu optimieren und betriebliche Ineffizienzen zu reduzieren.",
+        "sustainability": "Durch die konsequente Vermeidung von Wasserverlusten und die Reduzierung von Verschwendung schützt Diehl Metering wertvolle Ressourcen und ermöglicht ein nachhaltigeres Infrastrukturmanagement."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a5-case-1-front.webp",
+          "thumb": "cards/thumb/a5-case-1-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a5-case-1-back.webp",
+          "thumb": "cards/thumb/a5-case-1-back.webp"
+        }
+      },
+      "pages": {
+        "front": 79,
+        "back": 80
+      }
+    },
+    {
+      "id": "a5-case-2",
+      "type": "case",
+      "archetypeId": "a5",
+      "title": "Heineken",
+      "summary": "Heineken kooperiert mit Siemens, um KI-gestützte Lösungen zur Optimierung des Energieverbrauchs und zur Reduzierung der CO2-Emissionen in seinen Brauereien in Europa und Asien zu nutzen. Diese Initiative beschleunigt Heinekens Ziel, bis 2030 einen Netto-Null-Emissions-Betrieb (Scope 1 & 2) zu erreichen.",
+      "takeaways": {
+        "technology": "Siemens stellt KI-gesteuerte Energiemanagement-Tools bereit, die den Energieverbrauch überwachen und optimieren. Dies ermöglicht präzise Anpassungen, um Emissionen zu senken und die Effizienz in den Brauereiprozessen zu steigern.",
+        "organisation": "Die Partnerschaft integriert KI in die Produktionsprozesse von Heineken, fördert eine datengestützte Entscheidungsfindung und befähigt lokale Teams, nachhaltige Praktiken effektiv umzusetzen.",
+        "sustainability": "Die Partnerschaft forciert nachhaltige Energiestandards: Durch Effizienzsteigerung und Emissionssenkung werden globale Klimaschutzziele aktiv unterstützt."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a5-case-2-front.webp",
+          "thumb": "cards/thumb/a5-case-2-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a5-case-2-back.webp",
+          "thumb": "cards/thumb/a5-case-2-back.webp"
+        }
+      },
+      "pages": {
+        "front": 81,
+        "back": 82
+      }
+    },
+    {
+      "id": "a5-case-3",
+      "type": "case",
+      "archetypeId": "a5",
+      "title": "Trapeze Group",
+      "summary": "Die Trapeze Group nutzt KI-gestützte Lösungen für prädiktive und optimierte Instandhaltung, um die Effizienz und Zuverlässigkeit des Busnetzes in Singapur zu steigern. Diese Initiative minimiert Ausfallzeiten, senkt Kosten und gewährleistet einen reibungsloseren Betrieb des öffentlichen Personennahverkehrs.",
+      "takeaways": {
+        "technology": "KI-Algorithmen analysieren Echtzeitdaten von Bussen, um den Wartungsbedarf vorherzusagen und Reparaturpläne zu optimieren, wodurch unerwartete Ausfälle vermieden, und die Flottenleistung verbessert werden.",
+        "organisation": "Die Integration der prädiktiven Instandhaltung reduziert Betriebsunterbrechungen und ermöglicht es Verkehrsbehörden sowie Betreibern, die Servicequalität zu verbessern und die Fahrgastzufriedenheit zu steigern.",
+        "sustainability": "Die Trapeze Group stärkt die nachhaltige urbane Mobilität: Gezielte Instandhaltung senkt den Kraftstoffverbrauch, schont Ressourcen und verlängert die Einsatzdauer der Fahrzeuge signifikant."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a5-case-3-front.webp",
+          "thumb": "cards/thumb/a5-case-3-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a5-case-3-back.webp",
+          "thumb": "cards/thumb/a5-case-3-back.webp"
+        }
+      },
+      "pages": {
+        "front": 83,
+        "back": 84
+      }
+    },
+    {
+      "id": "a5-case-4",
+      "type": "case",
+      "archetypeId": "a5",
+      "title": "Manex AI",
+      "summary": "Manex AI nutzt KI-gestützte Analysen von Produktionsdaten, um die wahrscheinlichsten Defekte frühzeitig zu identifizieren und daraus optimale, datenbasierte Teststrategien abzuleiten, wodurch Unternehmen ihre Qualitätssicherung gezielter steuern und die Effizienz in der Produktion deutlich erhöhen können.",
+      "takeaways": {
+        "technology": "Durch die auf tabellarischem Maschinellen Lernen basierende Erkennung der wahrscheinlichsten Defekte in der Produktion kann Qualitatio optimale Teststrategien empfehlen. Auf diese Weise wird die maximale Menge der verfügbaren Produktionsdaten effektiv genutzt.",
+        "organisation": "Durch die Berücksichtigung großer Mengen an Prozessdaten lässt sich Qualitatio nahtlos in bestehende Abläufe integrieren, um maximale Effizienz bei minimalen Kosten zu gewährleisten.",
+        "sustainability": "Durch fortschrittliche und individuelle Teststrategien kann Manex AI seinen Kund:innen dabei helfen, die Anzahl der Defekte signifikant zu senken. Dies verbessert die Kund:innenzufriedenheit und reduziert langfristig die Kosten."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a5-case-4-front.webp",
+          "thumb": "cards/thumb/a5-case-4-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a5-case-4-back.webp",
+          "thumb": "cards/thumb/a5-case-4-back.webp"
+        }
+      },
+      "pages": {
+        "front": 85,
+        "back": 86
+      }
+    },
+    {
+      "id": "a6-archetype",
+      "type": "archetype",
+      "archetypeId": "a6",
+      "title": "Nachhaltige Alternativen für Prozesse und Produkte generieren",
+      "intro": "Der Einsatz von generativer KI in der Prozess- und Produktgestaltung eröffnet neue Möglichkeiten für mehr Nachhaltigkeit. Mithilfe fortschrittlicher Algorithmen können Unternehmen neuartige und nachhaltigere Prozesse, Produkte und Services entwickeln, die ganz oder teilweise durch KI generiert werden. Das bietet großes Potenzial für nahezu alle Unternehmensbereiche.",
+      "points": [],
+      "sustainabilityLink": "Die generative Neugestaltung von Prozessen, Produkten und Services im Sinne der Nachhaltigkeit bietet in großem Maßstab erhebliches Potenzial für ökonomische, ökologische und soziale Nachhaltigkeit.",
+      "images": {
+        "front": {
+          "full": "cards/full/a6-archetype-front.webp",
+          "thumb": "cards/thumb/a6-archetype-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a6-archetype-back.webp",
+          "thumb": "cards/thumb/a6-archetype-back.webp"
+        }
+      },
+      "pages": {
+        "front": 87,
+        "back": 88
+      }
+    },
+    {
+      "id": "a6-technology",
+      "type": "technology",
+      "archetypeId": "a6",
+      "title": "Technologie",
+      "points": [
+        "Für die Entwicklung solcher Anwendungsfälle braucht es im Unternehmen Kompetenzen im Bereich generativer KI.",
+        "Für eine hohe Leistungsfähigkeit generativer Algorithmen werden große Mengen unstrukturierter Daten benötigt, etwa zu Prozess- und Produkteigenschaften.",
+        "Es kommen meist semi-überwachte oder unüberwachte Lernverfahren zum Einsatz, um die großen Datenmengen sinnvoll zu nutzen.",
+        "Da neue Prozesse, Produkte und Services vorgeschlagen oder erzeugt werden, ist die analytische Dimension nicht nur prädiktiv, sondern auch generativ."
+      ],
+      "tip": "Open-Source-Modelle wie Llama 3 können feinjustiert und lokal betrieben werden, um generative KI datenschutzkonform zu nutzen.",
+      "images": {
+        "front": {
+          "full": "cards/full/a6-technology-front.webp",
+          "thumb": "cards/thumb/a6-technology-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a6-technology-back.webp",
+          "thumb": "cards/thumb/a6-technology-back.webp"
+        }
+      },
+      "pages": {
+        "front": 89,
+        "back": 90
+      }
+    },
+    {
+      "id": "a6-organisation",
+      "type": "organisation",
+      "archetypeId": "a6",
+      "title": "Organisation",
+      "points": [
+        "Da die Qualität generierter Ergebnisse variieren kann, werden solche Modelle meist in KI-unterstützten Prozessen eingesetzt und durch Menschen überprüft.",
+        "Für die Neugestaltung interner Prozesse und Produkte sind häufig vor allem unternehmensinterne Daten die zentrale Ressource.",
+        "Der Mehrwert entsteht direkt „im Frontend“ durch effizientere Prozesse, bessere Produkte und passgenauere Services für Kund:innen.",
+        "Generative KI kann grundsätzlich in nahezu allen Unternehmensfunktionen eingesetzt werden und dort Automatisierung und Transformation anstoßen."
+      ],
+      "valueProposition": "Durch bessere Prozesse und Services, werden bei dieser Nutzung von KI interne Effizienz und Kundennutzen verbunden.",
+      "images": {
+        "front": {
+          "full": "cards/full/a6-organisation-front.webp",
+          "thumb": "cards/thumb/a6-organisation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a6-organisation-back.webp",
+          "thumb": "cards/thumb/a6-organisation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 91,
+        "back": 92
+      }
+    },
+    {
+      "id": "a6-activation",
+      "type": "activation",
+      "archetypeId": "a6",
+      "title": "Aktivierungsfrage",
+      "question": "Wie könnte Ihr Unternehmen KI nutzen, um nachhaltigere Prozesse, Produkte oder Services zu entwickeln?",
+      "caseOverview": [
+        "B&M Maschinenbau nutzt generatives Design für die Entwicklung materialeffizienterer Leichtbaukomponenten und neuer Konstruktionslösungen.",
+        "Siemens x NVIDIA verbinden Industrial Metaverse, digitale Zwillinge und Generative KI, um Prozesse virtuell neu zu gestalten und nachhaltiger zu entwickeln.",
+        "Schneider Electric x Microsoft integrieren generative KI in bestehende Tools, um Prozesse ressourceneffizienter zu analysieren und zu verbessern.",
+        "BMW setzt generatives Design ein, um Fahrzeugkomponenten effizienter zu entwerfen und Material gezielter einzusetzen."
+      ],
+      "images": {
+        "front": {
+          "full": "cards/full/a6-activation-front.webp",
+          "thumb": "cards/thumb/a6-activation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a6-activation-back.webp",
+          "thumb": "cards/thumb/a6-activation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 93,
+        "back": 94
+      }
+    },
+    {
+      "id": "a6-case-1",
+      "type": "case",
+      "archetypeId": "a6",
+      "title": "B&M Maschinenbau",
+      "summary": "B&M Maschinenbau setzt generatives Design ein, um Leichtbau-Bauteile anhand definierter Lastfälle, Material- und Lagerangaben automatisch zu optimieren. Die KI-Software erzeugt dabei oft organisch/bionisch anmutende Gitterstrukturen, die bis zu 50 % Material einsparen (gemessen am Gewicht) und anschließend in der Regel per 3D-Druck realisiert werden.",
+      "takeaways": {
+        "technology": "Lastfälle, Materialeigenschaften und Randbedingungen werden vorgegeben, woraufhin der Algorithmus optimierte Strukturen erzeugt und sie per Finite-Element-Methode prüft. Die finale Geometrie wird häufig additiv gefertigt.",
+        "organisation": "Generatives Design beschleunigt die Entwicklung, da viele Varianten statt eines einzelnen Entwurfs entstehen. CAD-, Simulation- und Fertigungsteams iterieren enger zusammen, was Entwicklungszeit und Abstimmungsaufwand reduziert.",
+        "sustainability": "Generativ entworfene Bauteile können deutlich Material sparen und Emissionen senken."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a6-case-1-front.webp",
+          "thumb": "cards/thumb/a6-case-1-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a6-case-1-back.webp",
+          "thumb": "cards/thumb/a6-case-1-back.webp"
+        }
+      },
+      "pages": {
+        "front": 95,
+        "back": 96
+      }
+    },
+    {
+      "id": "a6-case-2",
+      "type": "case",
+      "archetypeId": "a6",
+      "title": "Siemens",
+      "summary": "Siemens transformiert die Neugestaltung von Prozessen mit Generativer KI und entwickelt dafür seine Version eines industriellen Metaverse. Durch die Integration von Technologien wie digitale Zwillinge und Extended Reality schafft Siemens Xcelerator eine immersive Umgebung, in der Prozesse virtuell entwickelt und neu gestaltet werden. Um die Zusammenarbeit mehrerer Stakeholder zu ermöglichen ist das NVIDIA-Ökosystem essenziell.",
+      "takeaways": {
+        "technology": "Xcelerator ist Siemens Plattformansatz für ein industrielles Metaverse. Funktionen zur Prozessentwicklung und zum Redesign werden dort als Services integriert und in einer virtuellen Umgebung nutzbar gemacht.",
+        "organisation": "In diesem Anwendungsfall werden Siemens Industrie- und Prozesswissen und NVIDIAs KI-Kompetenz kombiniert, um kollaborative Entwicklung im Metaverse zu ermöglichen.",
+        "sustainability": "Wenn Metaverse-Lösungen gezielt für nachhaltiges Prozess-Redesign genutzt werden, kann das ökonomische und ökologische Vorteile schaffen."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a6-case-2-front.webp",
+          "thumb": "cards/thumb/a6-case-2-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a6-case-2-back.webp",
+          "thumb": "cards/thumb/a6-case-2-back.webp"
+        }
+      },
+      "pages": {
+        "front": 97,
+        "back": 98
+      }
+    },
+    {
+      "id": "a6-case-3",
+      "type": "case",
+      "archetypeId": "a6",
+      "title": "Schneider Electric",
+      "summary": "Schneider Electric integriert Generative KI über Microsoft Azure OpenAI, um operative Prozesse weiterzuentwickeln, Aufgaben zu vereinfachen, Ressourcen besser zu verteilen und die interne Produktivität zu steigern. Ein zentrales Beispiel ist der Resource Advisor Copilot, der Datenanalysen und Entscheidungsunterstützung in bestehenden Abläufen ermöglicht und so effizientere Prozessgestaltungen unterstützt.",
+      "takeaways": {
+        "technology": "Der Resource Advisor Copilot ist als virtueller Begleiter in das bestehende Tool Resource Advisor eingebettet. Er liefert Analysen, Visualisierungen, Entscheidungshilfen und Zusammenfassungen in natürlicher Sprache.",
+        "organisation": "Durch die Zusammenarbeit mit Microsoft Azure OpenAI arbeitet Schneider Electric mit einem führenden Technologiepartner zusammen.",
+        "sustainability": "Durch die Verbindung von generativer KI mit bestehenden Lösungen kann KI gezielt für Nachhaltigkeit eingesetzt werden. Daraus entstehen insbesondere durch effizientere und ressourcenschonendere Prozesse wirtschaftliche Potenziale."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a6-case-3-front.webp",
+          "thumb": "cards/thumb/a6-case-3-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a6-case-3-back.webp",
+          "thumb": "cards/thumb/a6-case-3-back.webp"
+        }
+      },
+      "pages": {
+        "front": 99,
+        "back": 100
+      }
+    },
+    {
+      "id": "a6-case-4",
+      "type": "case",
+      "archetypeId": "a6",
+      "title": "BMW",
+      "summary": "BMW nutzt Generative KI, um den Designprozess für Fahrzeugbauteile kreativer und effizienter zu gestalten. Indem wiederkehrende Umsetzungsschritte stärker automatisiert werden, können sich Designer:innen stärker auf innovative Konzepte konzentrieren und so Kreativität und Produktivität im Entwicklungsprozess erhöhen",
+      "takeaways": {
+        "technology": "BMW integriert Generative KI und generative Designwerkzeuge in den Gestaltungsprozess, um Varianten für Bauteile zu erzeugen. So werden kreative Optionen schneller verfügbar und die Umsetzung im Designprozess unterstützt.",
+        "organisation": "Durch den Einsatz von generativer KI können sich Designer:innen stärker auf hochwertige kreative Aufgaben konzentrieren. Das fördert Zusammenarbeit und kann die Entwicklungszeit für neue Designs verkürzen.",
+        "sustainability": "Effizientere Designprozesse und ein gezielterer Materialeinsatz helfen, Ressourcenverschwendung zu verringern."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a6-case-4-front.webp",
+          "thumb": "cards/thumb/a6-case-4-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a6-case-4-back.webp",
+          "thumb": "cards/thumb/a6-case-4-back.webp"
+        }
+      },
+      "pages": {
+        "front": 101,
+        "back": 102
+      }
+    },
+    {
+      "id": "a7-archetype",
+      "type": "archetype",
+      "archetypeId": "a7",
+      "title": "Nachhaltigkeitsaktionen bewerten und automatisieren",
+      "intro": "Die fortschrittlichste Anwendung von Maschinellem Lernen für tabellarische Daten ist die autonome Vorhersage der Nachhaltigkeitsauswirkungen von Optionen für Prozessänderungen und die anschließende Auswahl der optimalen Strategie. Dies ermöglicht es Unternehmen, Prozesse zu etablieren, die ihre Nachhaltigkeit dynamisch optimieren. Durch die vollständige Automatisierung ist dies langfristig mit geringen Kosten verbunden.",
+      "points": [],
+      "sustainabilityLink": "Die automatische Neugestaltung von Prozessen für optimale Nachhaltigkeit ermöglicht ein großes Potenzial für ökonomische und ökologische Nachhaltigkeit.",
+      "images": {
+        "front": {
+          "full": "cards/full/a7-archetype-front.webp",
+          "thumb": "cards/thumb/a7-archetype-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a7-archetype-back.webp",
+          "thumb": "cards/thumb/a7-archetype-back.webp"
+        }
+      },
+      "pages": {
+        "front": 103,
+        "back": 104
+      }
+    },
+    {
+      "id": "a7-technology",
+      "type": "technology",
+      "archetypeId": "a7",
+      "title": "Technologie",
+      "points": [
+        "Tabellarisches maschinelles Lernen ist eine häufig vorkommende KI-Kompetenz, die von Organisationen in der Regel schnell aufgebaut und genutzt werden kann.",
+        "Obwohl dieser Archetyp die fortschrittlichste Anwendung von tabellarischem maschinellem Lernen darstellt, nutzt er strukturierte Daten für das Training.",
+        "Im Einklang mit anderen Anwendungsfällen von tabellarischem ML nutzt dieser Archetyp das überwachte Lernen (Supervised Learning).",
+        "Aufgrund ihrer fortgeschrittenen Natur sind Anwendungsfälle dieser Kategorie häufig prädiktiv oder empfehlend."
+      ],
+      "tip": "Open-Source-Modelle wie Llama 3 können feinjustiert und lokal betrieben werden, um generative KI datenschutzkonform zu nutzen.",
+      "images": {
+        "front": {
+          "full": "cards/full/a7-technology-front.webp",
+          "thumb": "cards/thumb/a7-technology-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a7-technology-back.webp",
+          "thumb": "cards/thumb/a7-technology-back.webp"
+        }
+      },
+      "pages": {
+        "front": 105,
+        "back": 106
+      }
+    },
+    {
+      "id": "a7-organisation",
+      "type": "organisation",
+      "archetypeId": "a7",
+      "title": "Organisation",
+      "points": [
+        "Die vollständige Automatisierung des Vergleichs und der Auswahl von Prozessalternativen impliziert eine Prozesssteuerung, die gänzlich durch KI erfolgt.",
+        "Um die Effektivität von Anwendungsfällen zu maximieren, ist die Einbindung interner, geteilter und externer Daten erstrebenswert.",
+        "Die Einrichtung dynamischer und automatisch optimierter Prozesse kann Unternehmen einen direkten Mehrwert im Kund:innenkontakt und bei der internen Effizienz bieten.",
+        "Gegenwärtig sind Anwendungsfälle dieser Kategorie am häufigsten in den Unternehmensbereichen Produktion und Logistik zu finden."
+      ],
+      "valueProposition": "Durch bessere Prozesse und Services werden bei dieser Nutzung von KI interne Effizienz und Kundennutzen verbunden.",
+      "images": {
+        "front": {
+          "full": "cards/full/a7-organisation-front.webp",
+          "thumb": "cards/thumb/a7-organisation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a7-organisation-back.webp",
+          "thumb": "cards/thumb/a7-organisation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 107,
+        "back": 108
+      }
+    },
+    {
+      "id": "a7-activation",
+      "type": "activation",
+      "archetypeId": "a7",
+      "title": "Aktivierungsfrage",
+      "question": "Welche Prozesse in Ihrem Unternehmen könnten Sie automatisiert verbessern?",
+      "caseOverview": [
+        "Celonis x Emporix steigern die Ressourceneffizienz durch autonome, KI-gestützte Prozess-Orchestrierung im Bestandsmanagement.",
+        "DHL senkt Emissionen und Kosten durch KI-basierte Routenoptimierung auf der „letzten Meile“.",
+        "Unilever reduziert Energieverbrauch und Warenausschuss in der Kühlkette mittels Nachfrageprognosen, die auf Maschinellem Lernen basieren.",
+        "Amazon verringert den Ressourcenverbrauch und CO2-Fußabdruck durch KI-optimierte Verpackungsprozesse."
+      ],
+      "images": {
+        "front": {
+          "full": "cards/full/a7-activation-front.webp",
+          "thumb": "cards/thumb/a7-activation-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a7-activation-back.webp",
+          "thumb": "cards/thumb/a7-activation-back.webp"
+        }
+      },
+      "pages": {
+        "front": 109,
+        "back": 110
+      }
+    },
+    {
+      "id": "a7-case-1",
+      "type": "case",
+      "archetypeId": "a7",
+      "title": "Celonis & Emporix",
+      "summary": "Celonis und Emporix ermöglichen durch KI-gestützte Prozess-Orchestrierung eine vollständig autonome Steuerung operativer Abläufe. Auf Basis fortschrittlicher Datenanalysen steigert diese Kooperation die Ressourceneffizienz und senkt Kosten – aktuell erfolgreich im Einsatz beim Bestandsmanagement für Bestelleinkäufe und Umlagerungen.",
+      "takeaways": {
+        "technology": "Basierend auf den Prozess-Einblicken (Process Insights) von Celonis können Modelle Maschinellen Lernens autonom zwischen verschiedenen Prozessoptionen wählen und diese mit hoher Geschwindigkeit und Effizienz ausführen.",
+        "organisation": "Durch die Option, Prozesspfade vorab zu definieren, können Manager dem Algorithmus einen Rahmen setzen und gleichzeitig Echtzeit-Optimierungsergebnisse beibehalten.",
+        "sustainability": "Der hohe Automatisierungsgrad kann zu hervorragenden Ergebnissen bei der ökologischen und ökonomischen Effizienz innerhalb des Prozesses führen."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a7-case-1-front.webp",
+          "thumb": "cards/thumb/a7-case-1-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a7-case-1-back.webp",
+          "thumb": "cards/thumb/a7-case-1-back.webp"
+        }
+      },
+      "pages": {
+        "front": 111,
+        "back": 112
+      }
+    },
+    {
+      "id": "a7-case-2",
+      "type": "case",
+      "archetypeId": "a7",
+      "title": "DHL",
+      "summary": "DHL nutzt die KI-gestützte Routenoptimierung von Wise Systems, um Logistikprozesse durch fortschrittliche Datenanalysen zu automatisieren. Das System ermöglicht effizientere Lieferrouten und bietet Managern direkte Entscheidungshilfe bei kurzfristigen Änderungen. Im Einsatz führt diese autonome Optimierung zu einer Senkung von Emissionen und Lieferkosten.",
+      "takeaways": {
+        "technology": "Durch die Nutzung tabellarischer Modelle und die Integration von Echtzeit-Lieferdaten wird eine sofortige Routenoptimierung ermöglicht.",
+        "organisation": "Der vollständig autonome Einsatz der Routenoptimierung ermöglicht eine hohe Effizienz innerhalb von DHL und liefert den Kund:innen detailliertere Einblicke.",
+        "sustainability": "Die effizientere Routenplanung bei Lieferungen auf der „letzten Meile“ führt zu erheblichen Einsparungen bei Emissionen und Prozesskosten."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a7-case-2-front.webp",
+          "thumb": "cards/thumb/a7-case-2-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a7-case-2-back.webp",
+          "thumb": "cards/thumb/a7-case-2-back.webp"
+        }
+      },
+      "pages": {
+        "front": 113,
+        "back": 114
+      }
+    },
+    {
+      "id": "a7-case-3",
+      "type": "case",
+      "archetypeId": "a7",
+      "title": "Unilever",
+      "summary": "Unilever nutzt ML-Lösungen, um die Kundennachfrage vorherzusagen und die Abläufe in der Lieferkette, einschließlich des Kühlkettenmanagements, dynamisch anzupassen. Diese Innovation steigert die Effizienz der Lieferkette, senkt den Energieverbrauch und stellt sicher, dass die Produkte die Kund:innen nachhaltig und pünktlich erreichen.",
+      "takeaways": {
+        "technology": "Die Modelle Maschinellen Lernens von Unilever analysieren Markttrends und Echtzeitsignale für präzise Nachfrageprognosen. Dies optimiert die Kühlkette, sichert eine effiziente Energienutzung und reduziert den Warenausschuss erheblich.",
+        "organisation": "Die Integration von KI in die Lieferkette von Unilever fördert eine bessere Koordination zwischen Teams sowie eine agilere Entscheidungsfindung. Dies ermöglicht es dem Unternehmen, Kund:innenbedürfnisse zu erfüllen und die operative Effizienz zu steigern.",
+        "sustainability": "Unilever reduziert Abfall sowie Energieverbrauch in der Kühlkette und fördert durch intelligente Logistik eine ressourceneffiziente, klimaschonende Produktion."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a7-case-3-front.webp",
+          "thumb": "cards/thumb/a7-case-3-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a7-case-3-back.webp",
+          "thumb": "cards/thumb/a7-case-3-back.webp"
+        }
+      },
+      "pages": {
+        "front": 115,
+        "back": 116
+      }
+    },
+    {
+      "id": "a7-case-4",
+      "type": "case",
+      "archetypeId": "a7",
+      "title": "Amazon",
+      "summary": "Amazon setzt KI-Lösungen ein, um die Anordnung von Paketen und Produkten in Kartons zu optimieren, was den Bedarf an Verpackungsmaterial erheblich reduziert. Diese Innovation verbessert die Ressourceneffizienz und steht im Einklang mit Amazons Verpflichtung zu einer nachhaltigen Logistik.",
+      "takeaways": {
+        "technology": "KI-gesteuerte Algorithmen ermitteln die effizienteste Methode, um Produkte in Kartons zu kombinieren und anzuordnen. Dadurch wird ungenutzter Leerraum reduziert und der Bedarf an Verpackungsmaterial minimiert.",
+        "organisation": "Diese Lösung optimiert die Verpackungsprozesse von Amazon, was die betriebliche Effizienz steigert und gleichzeitig Versandkosten sowie Umweltbelastungen reduziert.",
+        "sustainability": "Durch die Reduzierung des Versandkarton-Anteils von 69 % auf 42 % senkt Amazon Ressourcenverbrauch und CO2-Fußabdruck seiner Logistik erheblich. Dies fördert effiziente und nachhaltige Produktionsmuster entlang der gesamten Lieferkette."
+      },
+      "images": {
+        "front": {
+          "full": "cards/full/a7-case-4-front.webp",
+          "thumb": "cards/thumb/a7-case-4-front.webp"
+        },
+        "back": {
+          "full": "cards/full/a7-case-4-back.webp",
+          "thumb": "cards/thumb/a7-case-4-back.webp"
+        }
+      },
+      "pages": {
+        "front": 117,
+        "back": 118
+      }
+    }
+  ]
+}
