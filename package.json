@@ -26,11 +26,14 @@
     "@types/react": "^19.3.3",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.3.0",
+    "markdown-it": "^15.0.3",
+    "markdown-it-attrs": "^5.0.1",
     "oxlint": "^1.95.0",
     "prettier": "^3.10.1",
     "typescript": "~7.0.2",
     "vite": "^8.3.8",
-    "vitest": "^5.1.2"
+    "vitest": "^5.1.2",
+    "yaml": "^2.9.1"
   },
   "engines": {
     "node": ">=22"
