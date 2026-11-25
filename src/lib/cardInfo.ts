@@ -13,13 +13,6 @@ export function displayTitle(card: Card): string {
   return card.title
 }
 
-/** For guide cards whose printed name differs from the brochure name: "Karte: Inspirations-Modus 2". */
-export function printedHint(card: Card): string | undefined {
-  if (card.type !== 'guide') return undefined
-  const m = modeForCard(card.mode)
-  return m.printedName !== m.name ? t.modes.printedHint(m.printedName) : undefined
-}
-
 /** Short title for pager buttons and grid captions. */
 export function shortTitle(card: Card): string {
   return card.type === 'case' || card.type === 'guide' ? displayTitle(card) : typeLabel(card)

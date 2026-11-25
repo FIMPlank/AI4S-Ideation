@@ -92,18 +92,20 @@ The Leitfaden page is built from `src/content/leitfaden.de.md`, the brochure as
 web text. When the final brochure arrives:
 
 1. Replace the PDF in `source/brochure/` (keep exactly one PDF there).
-2. Sync the text in `leitfaden.de.md` with the new PDF, word for word. Keep the
+2. Sync the text in `leitfaden.de.md` with the new PDF, word for word, except
+   where it contradicts the printed cards (they win; list such deviations in
+   `webChanges`). Keep the
    `{#id}` on every heading: the ids are deep links and the page builds special
    blocks on them (`kernvorteile`, `hintergrund`, `kartenset`, `vorbereitung`,
    `ressourcen`, `allgemeine-vorbereitung`, `spielmodi`). `npm test` checks
    that they are all there.
 3. Update the frontmatter: `status: final`, the paper citation if it changed,
-   and remove the `openIssues` the authors have resolved.
+   and remove the `openIssues` and `webChanges` the authors have resolved.
 4. To offer the brochure as a download, set `"brochurePdfPublic": true` in
    `src/config/site.json`. The build then publishes it as
    `downloads/ideation-cards-broschuere.pdf` and shows "Broschüre (PDF)".
 
-Play-mode names and their mapping to the printed guide cards live in
+Play-mode names (as printed on the guide cards) and their order live in
 `src/config/modes.ts`.
 
 ## Deployment

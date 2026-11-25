@@ -29,7 +29,7 @@ export function cardsByArchetype(id: string): Card[] {
   return cards.filter((c) => c.archetypeId === id)
 }
 
-/** The 3 instruction cards in brochure order (Inspiration → Ideation → Strategie), not print order. */
+/** The 3 instruction cards in card order (Inspirations-Modus 1 → 2 → Strategie). */
 export const guideCards = (): GuideCard[] =>
   cards.filter((c): c is GuideCard => c.type === 'guide').sort((a, b) => modeOrder(a.mode) - modeOrder(b.mode))
 export const activationCards = (): ActivationCard[] => cards.filter((c): c is ActivationCard => c.type === 'activation')

@@ -8,7 +8,7 @@ import { cardSdgs } from '../data/query'
 import type { Card } from '../data/types'
 import { t } from '../i18n/de'
 import { asset } from '../lib/assets'
-import { displayTitle, fullLabel, printedHint, shortTitle, typeLabel } from '../lib/cardInfo'
+import { displayTitle, fullLabel, shortTitle, typeLabel } from '../lib/cardInfo'
 import { resolveList } from '../lib/cardList'
 import { absoluteUrl, href, navigate } from '../lib/router'
 import { NotFound } from './NotFound'
@@ -82,7 +82,6 @@ export function CardViewer({ id, params }: { id: string; params: URLSearchParams
             </span>
             {displayTitle(card)}
           </h1>
-          {printedHint(card) && <p className="viewer__arche">{printedHint(card)}</p>}
           {archetype && card.type !== 'archetype' && (
             <p className="viewer__arche">
               <a href={`#/archetyp/${archetype.id}`}>{archetype.title}</a>

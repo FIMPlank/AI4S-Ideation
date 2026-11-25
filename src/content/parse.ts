@@ -26,6 +26,8 @@ export interface LeitfadenMeta {
   cover: { headline: string; subline: string }
   paper: Paper
   openIssues: string[]
+  /** Where the web text deviates from the concept PDF (the printed cards are the reference). */
+  webChanges: string[]
 }
 
 export interface ListItem {
@@ -66,7 +68,7 @@ function validateMeta(data: unknown): LeitfadenMeta {
   if (missing.length) throw new Error(`leitfaden frontmatter: missing ${missing.join(', ')}`)
   if (d.status !== 'konzept' && d.status !== 'final')
     throw new Error(`leitfaden frontmatter: unknown status "${d.status}"`)
-  return { openIssues: [], source: '', ...d } as LeitfadenMeta
+  return { openIssues: [], webChanges: [], source: '', ...d } as LeitfadenMeta
 }
 
 function createMd() {

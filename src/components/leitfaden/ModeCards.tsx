@@ -3,7 +3,7 @@ import { guideCards } from '../../data/deck'
 import { t } from '../../i18n/de'
 import { CardImage } from '../CardImage'
 
-/** The three play modes in brochure order, each with its printed guide card. */
+/** The three play modes in card order, each with its printed guide card. */
 export function ModeCards({ headingLevel = 3 }: { headingLevel?: 3 | 4 }) {
   const H = `h${headingLevel}` as 'h3' | 'h4'
   const guides = guideCards()
@@ -24,7 +24,6 @@ export function ModeCards({ headingLevel = 3 }: { headingLevel?: 3 | 4 }) {
             </a>
             <div className="mode-card__body">
               <H>{m.name}</H>
-              {m.printedName !== m.name && <p className="mode-card__hint">{t.modes.printedHint(m.printedName)}</p>}
               <dl>
                 <dt>{t.landing.modeWhat}</dt>
                 <dd>{card.what}</dd>

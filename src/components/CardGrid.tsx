@@ -1,5 +1,5 @@
 import type { Card } from '../data/types'
-import { displayTitle, fullLabel, printedHint, typeLabel } from '../lib/cardInfo'
+import { displayTitle, fullLabel, typeLabel } from '../lib/cardInfo'
 import { href } from '../lib/router'
 import { CardImage } from './CardImage'
 
@@ -19,7 +19,6 @@ export function CardGrid({ cards, listParams }: { cards: Card[]; listParams: Rec
                 {named ? (
                   <>
                     <span className="card-grid__title">{displayTitle(c)}</span>
-                    {printedHint(c) && <span className="card-grid__hint">{printedHint(c)}</span>}
                   </>
                 ) : (
                   // the image is decorative, so screen readers get the rest of the label here

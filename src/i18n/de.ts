@@ -202,7 +202,6 @@ export const de = {
     case: { one: 'Fallbeispiel', many: 'Fallbeispiele' },
   } satisfies Record<CardType, { one: string; many: string }>,
   modes: {
-    printedHint: (printed: string) => `Karte: ${printed}`,
     soon: 'bald verfügbar',
     showCard: 'Anleitungskarte ansehen',
   },

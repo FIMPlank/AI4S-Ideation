@@ -1116,11 +1116,6 @@ a {
   color: var(--accent);
   margin-top: -0.2rem;
 }
-.card-grid__hint,
-.mode-card__hint {
-  font-size: 0.8rem;
-  color: var(--ink-2);
-}
 .badge--concept {
   margin-left: 0.6rem;
   background: #fff1d6;
@@ -1207,9 +1202,6 @@ a {
 .mode-card h3,
 .mode-card h4 {
   margin: 0;
-}
-.mode-card__hint {
-  margin: 0.1rem 0 0.5rem;
 }
 .mode-card dl {
   margin: 0 0 0.6rem;

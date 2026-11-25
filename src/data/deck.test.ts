@@ -7,7 +7,7 @@ import { CARD_TYPES, SDG_IDS } from './types'
 describe('deck data (cards.json)', () => {
   it('has 59 cards: 3 guides and 7 archetypes × 8 in the documented order', () => {
     expect(cards).toHaveLength(59)
-    expect(guideCards().map((g) => g.mode)).toEqual(['inspiration-2', 'inspiration-1', 'strategy'])
+    expect(guideCards().map((g) => g.mode)).toEqual(['inspiration-1', 'inspiration-2', 'strategy'])
     expect(archetypes).toHaveLength(7)
     for (const a of archetypes) {
       expect(cardsByArchetype(a.id).map((c) => c.type)).toEqual([

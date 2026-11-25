@@ -47,19 +47,22 @@ PDF. `meta.contentIssues` lists content questions for the authors. Don't
 - **Leitfaden (`#/leitfaden`)**: source is the brochure "Ideation Cards –
   Broschüre 105x148mm", status **konzept**. Its text lives in
   `src/content/leitfaden.de.md` (frontmatter: cover, paper citation,
-  openIssues; headings carry `{#id}` = section deep links). It is parsed at
-  build time (`src/content/parse.ts`, Vite plugin in `vite.config.ts`). Keep the
-  text word for word; language and content questions go into `openIssues` for
-  the authors, not into silent fixes. The PDF is in `source/brochure/` and is
-  only published when `brochurePdfPublic` is true in `src/config/site.json`.
-- **Mode names**: the website uses the brochure names and order
-  (Inspirations-Modus → Ideation-Modus → Strategie-Modus), defined once in
-  `src/config/modes.ts`, and shows the printed card name as a hint
-  (brochure Inspirations-Modus = card "Inspirations-Modus 2", brochure
-  Ideation-Modus = card "Inspirations-Modus 1"). Route ids: `inspiration`,
-  `ideation`, `strategie`.
+  openIssues, webChanges; headings carry `{#id}` = section deep links). It is
+  parsed at build time (`src/content/parse.ts`, Vite plugin in
+  `vite.config.ts`). The PDF is in `source/brochure/` and is only published
+  when `brochurePdfPublic` is true in `src/config/site.json`.
+- **The printed cards are the most up-to-date source.** Where the brochure
+  contradicts them (mode names, card types), the Leitfaden text follows the
+  cards. Every such deviation from the PDF, and the language fixes, is listed in
+  `webChanges` so the authors can adopt them in the final brochure. Otherwise
+  keep the brochure text word for word; open content questions go into
+  `openIssues`, not into silent fixes.
+- **Mode names**: as printed on the guide cards, in card order
+  (Inspirations-Modus 1 → Inspirations-Modus 2 → Strategie-Modus), defined once
+  in `src/config/modes.ts`. Route ids: `inspiration-1`, `inspiration-2`,
+  `strategie`.
 
-## Play modes (source of truth: the guide cards; names: see Content)
+## Play modes (source of truth: the guide cards)
 
 - **Inspirations-Modus 1**: split into groups. Each group draws an archetype
   and reads its archetype card, then technology + organisation, then the case
