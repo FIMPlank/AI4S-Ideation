@@ -1,6 +1,10 @@
 import type { CSSProperties } from 'react'
 import { CardImage } from '../components/CardImage'
-import { archetypes, cardsByArchetype, guideCards } from '../data/deck'
+import { Benefits } from '../components/leitfaden/Benefits'
+import { ResearchBadge } from '../components/leitfaden/CitationCard'
+import { ModeCards } from '../components/leitfaden/ModeCards'
+import { firstList, leitfaden, sectionById } from '../content/leitfaden'
+import { archetypes, cardsByArchetype } from '../data/deck'
 import { t } from '../i18n/de'
 import { asset, PDF_PATH } from '../lib/assets'
 import { textOn } from '../lib/color'
@@ -14,7 +18,8 @@ export function Landing() {
         <div className="container hero__inner">
           <div className="hero__text">
             <p className="eyebrow">{l.eyebrow}</p>
-            <h1>{l.title}</h1>
+            <h1>{leitfaden.meta.cover.headline}</h1>
+            <p className="hero__subline">{leitfaden.meta.cover.subline}</p>
             <p className="lead">{l.lead}</p>
             <div className="cta-row">
               <a className="btn btn--primary" href="#/karten">
@@ -42,6 +47,22 @@ export function Landing() {
         </div>
       </section>
 
+      <section className="why" aria-labelledby="h-why">
+        <div className="container section">
+          <h2 id="h-why">{l.whyTitle}</h2>
+          <Benefits items={firstList(sectionById('kernvorteile'))} headingLevel={3} />
+          <p className="why__links">
+            <a className="btn btn--small" href="#/leitfaden">
+              {l.whyMore}
+            </a>
+            <a href="#/leitfaden/hintergrund" className="research-link">
+              <ResearchBadge />
+              <span>{l.research}</span>
+            </a>
+          </p>
+        </div>
+      </section>
+
       <section className="container section" aria-labelledby="h-archetypes">
         <h2 id="h-archetypes">{l.archetypesTitle}</h2>
         <ol className="archetype-list">
@@ -62,23 +83,7 @@ export function Landing() {
       <section className="container section" aria-labelledby="h-modes">
         <h2 id="h-modes">{l.modesTitle}</h2>
         <p>{l.modesLead}</p>
-        <ul className="mode-list">
-          {guideCards().map((m) => (
-            <li key={m.id} className="mode">
-              <h3>{m.title}</h3>
-              <dl>
-                <dt>{l.modeWhat}</dt>
-                <dd>{m.what}</dd>
-                <dt>{l.modeWhen}</dt>
-                <dd>{m.when}</dd>
-              </dl>
-              <a href={`#/karte/${m.id}?liste=anleitung`}>
-                {l.modeRead}
-                <span className="visually-hidden">: {m.title}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <ModeCards headingLevel={3} />
       </section>
 
       <section className="container section about" aria-labelledby="h-about">

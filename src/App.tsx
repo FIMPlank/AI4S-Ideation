@@ -9,10 +9,16 @@ import { CardViewer } from './pages/CardViewer'
 import { Deck } from './pages/Deck'
 import { Draw } from './pages/Draw'
 import { Landing } from './pages/Landing'
+import { Leitfaden } from './pages/Leitfaden'
 import { Legal } from './pages/Legal'
 import { NotFound } from './pages/NotFound'
 
 const SITE = t.site.name
+const DEFAULT_DESCRIPTION = document.querySelector('meta[name="description"]')?.getAttribute('content') ?? ''
+
+function setMetaDescription(text: string) {
+  document.querySelector('meta[name="description"]')?.setAttribute('content', text)
+}
 
 function titleFor(route: Route): string {
   switch (route.name) {
@@ -30,6 +36,8 @@ function titleFor(route: Route): string {
     }
     case 'draw':
       return `${t.titles.draw} · ${SITE}`
+    case 'leitfaden':
+      return `${t.titles.leitfaden} · ${SITE}`
     case 'impressum':
       return `${t.legal.impressum} · ${SITE}`
     case 'datenschutz':
@@ -48,9 +56,11 @@ export function App() {
   const { route, params } = useLocation()
   const key = pageKey(route)
   const first = useRef(true)
+  const deepSection = route.name === 'leitfaden' ? route.section : undefined
 
   useEffect(() => {
     document.title = titleFor(route)
+    setMetaDescription(route.name === 'leitfaden' ? t.leitfaden.metaDescription : DEFAULT_DESCRIPTION)
   }, [route])
 
   useEffect(() => {
@@ -58,6 +68,8 @@ export function App() {
       first.current = false
       return
     }
+    // a Leitfaden deep link scrolls to its own section
+    if (deepSection) return
     window.scrollTo(0, 0)
     // move focus to the new page so screen readers announce it
     const h1 = document.querySelector<HTMLElement>('main h1')
@@ -65,7 +77,7 @@ export function App() {
       h1.tabIndex = -1
       h1.focus({ preventScroll: true })
     }
-  }, [key])
+  }, [key, deepSection])
 
   return (
     <Layout route={route}>
@@ -86,6 +98,8 @@ function Page({ route, params }: { route: Route; params: URLSearchParams }) {
       return <CardViewer id={route.id} params={params} />
     case 'draw':
       return <Draw params={params} />
+    case 'leitfaden':
+      return <Leitfaden section={route.section} />
     case 'impressum':
     case 'datenschutz':
       return <Legal kind={route.name} />

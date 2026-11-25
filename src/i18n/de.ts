@@ -1,4 +1,4 @@
-import type { CardType, PlayMode } from '../data/types'
+import type { CardType } from '../data/types'
 
 /** All UI strings. An English edition later = add en.ts with the same shape. */
 export const de = {
@@ -13,6 +13,7 @@ export const de = {
     mainNav: 'Hauptnavigation',
     navCards: 'Karten',
     navDraw: 'Karte ziehen',
+    navGuide: 'Leitfaden',
   },
   footer: {
     publishedBy: 'Herausgegeben vom',
@@ -23,8 +24,7 @@ export const de = {
     privacy: 'Datenschutz',
   },
   landing: {
-    eyebrow: 'Ideation Cards',
-    title: 'KI für die Twin Transformation',
+    eyebrow: 'Ideation Cards · KI für die Twin Transformation',
     lead: 'Digital und nachhaltig zugleich: Das Kartendeck zeigt sieben Archetypen, mit denen Unternehmen künstliche Intelligenz für ökonomische, ökologische und soziale Nachhaltigkeit einsetzen. Jeder Archetyp kommt mit Technologie- und Organisationskarte, einer Aktivierungsfrage und vier Fallbeispielen aus der Praxis.',
     ctaExplore: 'Karten entdecken',
     ctaDraw: 'Karte ziehen',
@@ -38,6 +38,9 @@ export const de = {
     modeWhat: 'Ergebnis',
     modeWhen: 'Wann',
     modeRead: 'Anleitung ansehen',
+    whyTitle: 'Warum Ideation Cards?',
+    whyMore: 'Mehr im Leitfaden',
+    research: 'Zur wissenschaftlichen Grundlage',
     aboutTitle: 'Über das Deck',
     about:
       'Die Ideation Cards werden vom Fraunhofer-Forschungscampus Twin Transformation (FFTT) herausgegeben. Sie helfen Unternehmen, vor allem im Mittelstand, KI-Use-Cases zu finden, die Wirtschaftlichkeit und Nachhaltigkeit zugleich voranbringen.',
@@ -114,6 +117,54 @@ export const de = {
     label: (n: number) => `Aktivierungsfrage · Archetyp ${n}`,
     viewCard: 'Karte ansehen',
   },
+  leitfaden: {
+    metaDescription:
+      'Leitfaden zu den Ideation Cards: Motivation, wissenschaftlicher Hintergrund, Aufbau des Kartensets, Vorbereitung eines Workshops und die drei Spielmodi.',
+    concept: 'Konzeptfassung',
+    conceptNote:
+      'Dieser Leitfaden basiert auf der Konzeptfassung der Broschüre und wird mit der finalen Fassung aktualisiert.',
+    toc: 'Inhalt',
+    tocLabel: 'Inhaltsverzeichnis des Leitfadens',
+    print: 'Drucken',
+    brochurePdf: 'Broschüre (PDF)',
+    research: 'Forschungsbasiert',
+    paperLink: 'Zum Paper',
+    copyCitation: 'Zitation kopieren',
+    citationCopied: 'Zitation kopiert',
+    citationPrompt: 'Zitation kopieren:',
+    citationLabel: 'Wissenschaftliche Grundlage',
+    citationJournal: (journal: string, volume: number, pages: string) => `${journal}, ${volume}, ${pages}`,
+    deckGlance: 'Das Deck auf einen Blick',
+    deckFormula: (total: number, guides: number, archetypes: number, per: number) =>
+      `${total} Karten = ${guides} Anleitungskarten + ${archetypes} Archetypen × ${per} Karten`,
+    anatomyTitle: 'Aufbau eines Archetyp-Decks',
+    anatomyLead: 'Jedes der sieben Decks besteht aus acht Karten in dieser Reihenfolge (Beispiel: Archetyp 1):',
+    anatomy: {
+      archetype: 'Beschreibt den Archetyp und seinen Nachhaltigkeitsbezug, mit den passenden SDGs.',
+      technology: 'Technische Merkmale: Daten, Lernverfahren, Einsatzweise, dazu ein Tipp.',
+      organisation: 'Organisatorische Voraussetzungen und das Wertversprechen.',
+      activation: 'Die Aktivierungsfrage für die Gruppe und ein Überblick der vier Fallbeispiele.',
+      case: 'Ein Unternehmen aus der Praxis, mit Key Takeaways zu Technologie, Organisation und Nachhaltigkeit.',
+    } as Record<'archetype' | 'technology' | 'organisation' | 'activation' | 'case', string>,
+    caseRange: 'Fallbeispiele 1–4',
+    archetypesTitle: 'Die sieben Archetypen',
+    keyNumbers: 'Kennzahlen',
+    numbers: {
+      cards: 'Karten',
+      archetypes: 'Archetypen',
+      activation: 'Aktivierungsfragen',
+      cases: 'Fallbeispiele',
+      sdgs: 'SDGs',
+    },
+    phases: ['Sensibilisierung & Weiterbildung', 'Brainstorming', 'Strategische Planung', 'Umsetzung & Bewertung'],
+    phasesLabel: 'Vier Phasen der Nutzung',
+    checklistLabel: 'Checkliste Ressourcen',
+    checklistProgress: (done: number, total: number) => `${done} von ${total} bereit`,
+    checklistReset: 'Zurücksetzen',
+    stepsLabel: 'Schritte der Vorbereitung',
+    modeHint: 'Anleitungskarte',
+    toPage: (title: string) => `Zum Abschnitt ${title}`,
+  },
   legal: {
     impressum: 'Impressum',
     privacy: 'Datenschutzerklärung',
@@ -151,13 +202,14 @@ export const de = {
     case: { one: 'Fallbeispiel', many: 'Fallbeispiele' },
   } satisfies Record<CardType, { one: string; many: string }>,
   modes: {
-    'inspiration-1': 'Inspirations-Modus 1',
-    'inspiration-2': 'Inspirations-Modus 2',
-    strategy: 'Strategie-Modus',
-  } satisfies Record<PlayMode, string>,
+    printedHint: (printed: string) => `Karte: ${printed}`,
+    soon: 'bald verfügbar',
+    showCard: 'Anleitungskarte ansehen',
+  },
   sdg: (id: number) => `SDG ${id}: `,
   titles: {
     deck: 'Karten entdecken',
+    leitfaden: 'Leitfaden',
     draw: 'Karte ziehen',
     notFound: 'Nicht gefunden',
   },

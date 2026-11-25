@@ -6,6 +6,8 @@ export type Route =
   | { name: 'archetype'; id: string }
   | { name: 'card'; id: string }
   | { name: 'draw' }
+  /** section is a heading id from leitfaden.de.md; not part of the page identity */
+  | { name: 'leitfaden'; section?: string }
   | { name: 'impressum' }
   | { name: 'datenschutz' }
   | { name: 'notFound' }
@@ -37,6 +39,8 @@ function matchRoute(parts: string[]): Route {
       return id ? { name: 'archetype', id } : { name: 'notFound' }
     case 'karte':
       return id ? { name: 'card', id } : { name: 'notFound' }
+    case 'leitfaden':
+      return id ? { name: 'leitfaden', section: id } : { name: 'leitfaden' }
     case 'ziehen':
       return id ? { name: 'notFound' } : { name: 'draw' }
     case 'impressum':

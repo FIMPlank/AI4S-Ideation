@@ -9,6 +9,8 @@ describe('parseHash', () => {
     ['#/archetyp/a3', { name: 'archetype', id: 'a3' }],
     ['#/karte/a1-2', { name: 'card', id: 'a1-2' }],
     ['#/ziehen', { name: 'draw' }],
+    ['#/leitfaden', { name: 'leitfaden' }],
+    ['#/leitfaden/hintergrund', { name: 'leitfaden', section: 'hintergrund' }],
     ['#/impressum', { name: 'impressum' }],
     ['#/datenschutz', { name: 'datenschutz' }],
     ['#/gibtsnicht', { name: 'notFound' }],

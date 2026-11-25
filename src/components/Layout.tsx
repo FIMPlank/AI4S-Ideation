@@ -6,6 +6,7 @@ import { Footer } from './Footer'
 const NAV: { href: string; label: string; match: Route['name'][] }[] = [
   { href: '#/karten', label: t.site.navCards, match: ['deck', 'archetype', 'card'] },
   { href: '#/ziehen', label: t.site.navDraw, match: ['draw'] },
+  { href: '#/leitfaden', label: t.site.navGuide, match: ['leitfaden'] },
 ]
 
 export function Layout({ route, children }: { route: Route; children: ReactNode }) {
