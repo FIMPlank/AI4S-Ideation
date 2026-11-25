@@ -4,6 +4,7 @@ import { archetypes, cardsByArchetype, guideCards } from '../data/deck'
 import { t } from '../i18n/de'
 import { asset, PDF_PATH } from '../lib/assets'
 import { textOn } from '../lib/color'
+import { replayShuffle } from '../lib/replayShuffle'
 
 export function Landing() {
   const l = t.landing
@@ -32,7 +33,7 @@ export function Landing() {
               </button>
             </div>
           </div>
-          <div className="hero__fan" aria-hidden="true">
+          <div className="hero__fan" aria-hidden="true" onPointerEnter={replayShuffle}>
             {heroCards.map((c, i) => (
               <span key={c.id} className="hero__card" style={{ '--i': i - 2 } as CSSProperties}>
                 <CardImage card={c} decorative eager={i === 2} />
