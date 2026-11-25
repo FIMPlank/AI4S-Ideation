@@ -13,14 +13,15 @@ the phase plan is in [`PROMPTS.md`](PROMPTS.md).
 
 ## What's in it (phase 1: card explorer)
 
-| Route                          | What it does                                                                                               |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| `#/`                           | Landing: what the deck is, the 7 archetypes, the 3 play modes, download the print PDF                      |
-| `#/karten`                     | Fanned stacks per archetype + instruction deck; filter by card type and SDG, free-text search, thumb grid  |
-| `#/archetyp/:id`               | The 8 cards of one archetype in deck order (`a1`–`a7`, or `anleitung` for the 3 instruction cards)         |
-| `#/karte/:id`                  | Viewer: flip (click/tap, Space/Enter), ←/→ or swipe through the current list, "Text anzeigen", SDGs, share |
-| `#/ziehen`                     | Draw a random activation question (never the same one twice in a row)                                      |
-| `#/impressum`, `#/datenschutz` | Marked placeholders until Fraunhofer legal/data protection review                                          |
+| Route                          | What it does                                                                                                                               |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `#/`                           | Landing: what the deck is, the 7 archetypes, the 3 play modes, download the print PDF                                                      |
+| `#/karten`                     | Fanned stacks per archetype + instruction deck; filter by card type and SDG, free-text search, thumb grid                                  |
+| `#/archetyp/:id`               | The 8 cards of one archetype in deck order (`a1`–`a7`, or `anleitung` for the 3 instruction cards)                                         |
+| `#/karte/:id`                  | Viewer: flip (click/tap, Space/Enter), ←/→ or swipe through the current list, "Text anzeigen", SDGs, share                                 |
+| `#/leitfaden`                  | The brochure as a web guide: TOC with deep links (`#/leitfaden/hintergrund`), citation, card-set overview, resource checklist, print as A4 |
+| `#/ziehen`                     | Draw a random activation question (never the same one twice in a row)                                                                      |
+| `#/impressum`, `#/datenschutz` | Marked placeholders until Fraunhofer legal/data protection review                                                                          |
 
 Filters live in the URL (`#/karten?typ=case&sdg=13&q=recycling`), and the viewer
 keeps the list you came from (`#/karte/a1-case-1?liste=filter&typ=case…`), so
@@ -62,11 +63,13 @@ src/data/types.ts       Card, Archetype, CardType, SdgId …
 src/data/query.ts       normalize (German, case/diacritics-insensitive), filter, search, drawRandom
 src/data/deck.ts        typed access: cardsByArchetype, findCards, activationCards …
 src/data/sdgs.ts        SDG short titles + official colours
+src/content/            leitfaden.de.md (brochure text) + build-time parser
+src/config/             modes.ts (mode names/order), site.json (brochurePdfPublic)
 src/i18n/de.ts          every UI string (add en.ts for an English edition)
 src/lib/                hash router, list context for the viewer, colour contrast, assets
 src/components/         CardImage, FlipCard, CardText, CardGrid, CardStack, FilterBar, SdgChip, …
 src/pages/              one component per route
-scripts/copy-pdf.mjs    copies source/*.pdf into public/downloads/
+scripts/copy-pdf.mjs    copies source/*.pdf (and, if public, the brochure) into public/downloads/
 ```
 
 ## Regenerating the cards
@@ -82,6 +85,26 @@ npm test   # deck integrity tests check structure, ids, SDGs and that every imag
 
 Keep exactly one PDF in `source/`; it is published as
 `downloads/ideation-cards-twin-transformation.pdf`.
+
+## Updating the Leitfaden (brochure)
+
+The Leitfaden page is built from `src/content/leitfaden.de.md`, the brochure as
+web text. When the final brochure arrives:
+
+1. Replace the PDF in `source/brochure/` (keep exactly one PDF there).
+2. Sync the text in `leitfaden.de.md` with the new PDF, word for word. Keep the
+   `{#id}` on every heading: the ids are deep links and the page builds special
+   blocks on them (`kernvorteile`, `hintergrund`, `kartenset`, `vorbereitung`,
+   `ressourcen`, `allgemeine-vorbereitung`, `spielmodi`). `npm test` checks
+   that they are all there.
+3. Update the frontmatter: `status: final`, the paper citation if it changed,
+   and remove the `openIssues` the authors have resolved.
+4. To offer the brochure as a download, set `"brochurePdfPublic": true` in
+   `src/config/site.json`. The build then publishes it as
+   `downloads/ideation-cards-broschuere.pdf` and shows "Broschüre (PDF)".
+
+Play-mode names and their mapping to the printed guide cards live in
+`src/config/modes.ts`.
 
 ## Deployment
 

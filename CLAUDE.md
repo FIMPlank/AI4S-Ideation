@@ -42,7 +42,24 @@ The **images still show the print typos** until the editor sends a corrected
 PDF. `meta.contentIssues` lists content questions for the authors. Don't
 "fix" those silently, and never invent or reword card content.
 
-## Play modes (source of truth: the guide cards)
+## Content
+
+- **Leitfaden (`#/leitfaden`)**: source is the brochure "Ideation Cards –
+  Broschüre 105x148mm", status **konzept**. Its text lives in
+  `src/content/leitfaden.de.md` (frontmatter: cover, paper citation,
+  openIssues; headings carry `{#id}` = section deep links). It is parsed at
+  build time (`src/content/parse.ts`, Vite plugin in `vite.config.ts`). Keep the
+  text word for word; language and content questions go into `openIssues` for
+  the authors, not into silent fixes. The PDF is in `source/brochure/` and is
+  only published when `brochurePdfPublic` is true in `src/config/site.json`.
+- **Mode names**: the website uses the brochure names and order
+  (Inspirations-Modus → Ideation-Modus → Strategie-Modus), defined once in
+  `src/config/modes.ts`, and shows the printed card name as a hint
+  (brochure Inspirations-Modus = card "Inspirations-Modus 2", brochure
+  Ideation-Modus = card "Inspirations-Modus 1"). Route ids: `inspiration`,
+  `ideation`, `strategie`.
+
+## Play modes (source of truth: the guide cards; names: see Content)
 
 - **Inspirations-Modus 1**: split into groups. Each group draws an archetype
   and reads its archetype card, then technology + organisation, then the case

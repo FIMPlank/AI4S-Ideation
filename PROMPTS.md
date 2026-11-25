@@ -89,7 +89,15 @@ Phase 2 (see CLAUDE.md, "Play modes"): turn the three guide cards into guided,
 step-by-step flows that one person or one team around one screen can play,
 with no backend. State lives in localStorage (try/catch). Plan first, then build.
 
+Mode names, order and route ids come from src/config/modes.ts (brochure names
+and order everywhere, printed card name as a small hint). Redirect the old
+card-numbered ids (#/modus/inspiration-1 → ideation, inspiration-2 →
+inspiration, strategy → strategie) via LEGACY_MODE_IDS. Set `available: true`
+there when a mode is built, so the Leitfaden and landing link to it.
+
 Shared building blocks:
+- Facilitator prep screen before a workshop: the Ressourcen checklist from the
+  Leitfaden (same localStorage state) + Allgemeine Vorbereitung step 1.
 - Step flow with progress bar, back/next, optional timer per step
   (presets 5/10/15/20 min, pause, gentle sound/visual at the end,
   off by default), and a "Beamer-Ansicht" toggle (large type, high contrast).
@@ -98,16 +106,7 @@ Shared building blocks:
   "Drucken / als PDF speichern" gives a clean 1–2 page summary).
   No heavy PDF libraries.
 
-Inspirations-Modus 1 (#/modus/inspiration-1):
-- Setup: number of groups (1–6). "Archetyp ziehen" per group: random, no
-  duplicates, with a draw animation that works on a beamer; manual override.
-- Per group: guided reading archetype → technology → organisation → 4 cases
-  (each a flippable card), then an idea form: title, short description,
-  "inspiriert von" (optional case card), target audience / process (free
-  text). Goal 2–3 ideas, shown as a soft counter, not enforced.
-- Result: idea wall grouped by archetype colour.
-
-Inspirations-Modus 2 (#/modus/inspiration-2):
+Inspirations-Modus (#/modus/inspiration; printed card "Inspirations-Modus 2"):
 - All 28 case cards, grouped by archetype, open. Dot voting: each person has
   N dots (default 3, configurable 2–5); in single-screen mode you can add
   people (names optional, "Person 1, 2…").
@@ -116,6 +115,19 @@ Inspirations-Modus 2 (#/modus/inspiration-2):
 - The two discussion questions from the guide card, each with a notes field;
   mark "relevante Archetypen".
 - Result: prioritised archetypes + top cases + notes.
+
+Ideation-Modus (#/modus/ideation; printed card "Inspirations-Modus 1"):
+- Setup: number of groups (1–6). "Archetyp ziehen" per group: random, no
+  duplicates, with a draw animation that works on a beamer; manual override.
+- Per group: guided reading archetype → technology → organisation → 4 cases
+  (each a flippable card), then an idea form: title, short description,
+  "inspiriert von" (optional case card), target audience / process (free
+  text). Goal 2–3 ideas, shown as a soft counter, not enforced.
+- Optional "Klärungszeit" step after the sequential reading of the cards
+  (Leitfaden, Allgemeine Vorbereitung step 2): timer, default 15 min, skippable.
+- Ends with a "Pitch" step: groups present their ideas one after another;
+  pitch timer per group (default 2 min), the facilitator moves group by group.
+- Result: idea wall grouped by archetype colour.
 
 Strategie-Modus (#/modus/strategie):
 - Pick what to work on: a prioritised archetype, a top case or an idea
@@ -130,8 +142,9 @@ Strategie-Modus (#/modus/strategie):
   alternative below the chart.
 - "Erste Umsetzungsschritte": list of steps (was / wer / bis wann).
 
-Also: a "Kompletter Workshop" path that chains Modus 2 → Modus 1 → Strategie
-and carries results forward. Switch the landing page CTA "Workshop starten" on,
+Also: a "Kompletter Workshop" path that follows the brochure order
+Inspirations-Modus → Ideation-Modus → Strategie-Modus and carries results
+forward. Switch the landing page CTA "Workshop starten" on,
 leading to a mode picker that explains when to use which mode (from the
 cards' "Was/Wann").
 
