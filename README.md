@@ -15,7 +15,8 @@ the phase plan is in [`PROMPTS.md`](PROMPTS.md).
 
 | Route                          | What it does                                                                                                                               |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `#/`                           | Landing: what the deck is, the 7 archetypes, the 3 play modes, download the print PDF                                                      |
+| `#/`                           | Landing (design: `design/landing/README.md`): hero, stats, 7 archetypes, deck anatomy, draw an activation question, play modes, research   |
+| `#/spielmodi`, `#/forschung`   | Landing page scrolled to that section                                                                                                      |
 | `#/karten`                     | Fanned stacks per archetype + instruction deck; filter by card type and SDG, free-text search, thumb grid                                  |
 | `#/archetyp/:id`               | The 8 cards of one archetype in deck order (`a1`–`a7`, or `anleitung` for the 3 instruction cards)                                         |
 | `#/karte/:id`                  | Viewer: flip (click/tap, Space/Enter), ←/→ or swipe through the current list, "Text anzeigen", SDGs, share                                 |
@@ -64,7 +65,10 @@ src/data/query.ts       normalize (German, case/diacritics-insensitive), filter,
 src/data/deck.ts        typed access: cardsByArchetype, findCards, activationCards …
 src/data/sdgs.ts        SDG short titles + official colours
 src/content/            leitfaden.de.md (brochure text) + build-time parser
-src/config/             modes.ts (mode names/order), site.json (brochurePdfPublic)
+design/landing/         approved landing design: README (tokens, type, shapes, sections), reference HTML, screenshots
+src/styles/tokens.css   design tokens (colours, type scale, radii, spacing, shadows); landing.css uses only these
+src/components/Tile.tsx shape vocabulary (quarter circle, leaf, dome, circle) for logo, hero mosaic, icons, footer band
+src/config/             modes.ts (mode names/order), site.json (brochurePdfPublic, miroverseUrl)
 src/i18n/de.ts          every UI string (add en.ts for an English edition)
 src/lib/                hash router, list context for the viewer, colour contrast, assets
 src/components/         CardImage, FlipCard, CardText, CardGrid, CardStack, FilterBar, SdgChip, …

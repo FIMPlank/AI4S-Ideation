@@ -2,11 +2,16 @@ import type { ReactNode } from 'react'
 import { t } from '../i18n/de'
 import type { Route } from '../lib/router'
 import { Footer } from './Footer'
+import { LogoMark } from './landing/LogoMark'
 
-const NAV: { href: string; label: string; match: Route['name'][] }[] = [
-  { href: '#/karten', label: t.site.navCards, match: ['deck', 'archetype', 'card'] },
-  { href: '#/ziehen', label: t.site.navDraw, match: ['draw'] },
-  { href: '#/leitfaden', label: t.site.navGuide, match: ['leitfaden'] },
+/** Workshop flows don't exist yet: "Workshop starten" opens the workshop preparation in the Leitfaden. */
+export const WORKSHOP_HREF = '#/leitfaden/vorbereitung'
+
+const NAV: { href: string; label: string; current: (r: Route) => boolean }[] = [
+  { href: '#/karten', label: t.site.navCards, current: (r) => ['deck', 'archetype', 'card'].includes(r.name) },
+  { href: '#/spielmodi', label: t.site.navModes, current: (r) => r.name === 'landing' && r.section === 'spielmodi' },
+  { href: '#/leitfaden', label: t.site.navGuide, current: (r) => r.name === 'leitfaden' },
+  { href: '#/forschung', label: t.site.navResearch, current: (r) => r.name === 'landing' && r.section === 'forschung' },
 ]
 
 export function Layout({ route, children }: { route: Route; children: ReactNode }) {
@@ -23,34 +28,23 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
         {t.site.skip}
       </a>
       <header className="site-header">
-        <div className="container site-header__inner">
+        <div className="site-header__inner">
           <a href="#/" className="brand">
-            <svg className="brand__mark" aria-hidden="true" width="34" height="34" viewBox="0 0 36 36">
-              {/* three fanned mini cards in archetype colours */}
-              <rect x="10" y="6" width="16" height="23" rx="2.5" fill="#008198" transform="rotate(-18 18 30)" />
-              <rect x="10" y="6" width="16" height="23" rx="2.5" fill="#FBB900" transform="rotate(0 18 30)" />
-              <rect x="10" y="6" width="16" height="23" rx="2.5" fill="#EF7C00" transform="rotate(18 18 30)" />
-              <path
-                d="M18 12.5l1.6 3.3 3.6.5-2.6 2.5.6 3.6-3.2-1.7-3.2 1.7.6-3.6-2.6-2.5 3.6-.5z"
-                fill="#fff"
-                transform="rotate(18 18 30)"
-              />
-            </svg>
+            <LogoMark />
             <span className="brand__text">
-              <span className="brand__kicker">{t.site.brandKicker}</span>
               <span className="brand__name">{t.site.brand}</span>
+              <span className="brand__sub">{t.site.publisher}</span>
             </span>
           </a>
-          <nav aria-label={t.site.mainNav}>
-            <ul className="main-nav">
-              {NAV.map((n) => (
-                <li key={n.href}>
-                  <a href={n.href} aria-current={n.match.includes(route.name) ? 'page' : undefined}>
-                    {n.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <nav aria-label={t.site.mainNav} className="main-nav">
+            {NAV.map((n) => (
+              <a key={n.href} href={n.href} aria-current={n.current(route) ? 'page' : undefined}>
+                {n.label}
+              </a>
+            ))}
+            <a className="lbtn lbtn--primary lbtn--nav" href={WORKSHOP_HREF}>
+              {t.site.ctaWorkshop}
+            </a>
           </nav>
         </div>
       </header>

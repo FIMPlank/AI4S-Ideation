@@ -16,9 +16,20 @@ interface Props {
   /** Hint the browser that this is the page's main image (LCP). */
   priority?: boolean
   className?: string
+  /** With sizes, the browser picks thumb or full from a srcset (for images shown larger than a thumb). */
+  sizes?: string
 }
 
-export function CardImage({ card, side = 'front', size = 'thumb', decorative, eager, priority, className }: Props) {
+export function CardImage({
+  card,
+  side = 'front',
+  size = 'thumb',
+  decorative,
+  eager,
+  priority,
+  className,
+  sizes,
+}: Props) {
   const [w, h] = SIZES[size]
   const label = fullLabel(card)
   const alt = decorative ? '' : side === 'front' ? t.card.imageFront(label) : t.card.imageBack(label)
@@ -26,6 +37,12 @@ export function CardImage({ card, side = 'front', size = 'thumb', decorative, ea
     <img
       className={`card-img${className ? ` ${className}` : ''}`}
       src={asset(card.images[side][size])}
+      srcSet={
+        sizes
+          ? `${asset(card.images[side].thumb)} ${SIZES.thumb[0]}w, ${asset(card.images[side].full)} ${SIZES.full[0]}w`
+          : undefined
+      }
+      sizes={sizes}
       alt={alt}
       width={w}
       height={h}

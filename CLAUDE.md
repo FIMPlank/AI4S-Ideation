@@ -98,6 +98,7 @@ PDF. `meta.contentIssues` lists content questions for the authors. Don't
 
 ## Design
 
+- Landing page design: design/landing/README.md is the source of truth.
 - The cards are the hero. Show the real card images; build the UI around them,
   not instead of them.
 - Archetype colours come from `archetypes[].colour`. Yellow `#FBB900` and lime

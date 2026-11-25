@@ -1,0 +1,106 @@
+/*
+ * Design tokens. Source of truth: design/landing/README.md.
+ * Components use these custom properties, never raw hex values.
+ */
+:root {
+  /* ---- Colour ---- */
+  --navy: #075478;
+  --green-text: #0a7f66;
+  --ink: #16202a;
+  --body: #3b4651;
+  --muted: #5a6672;
+  --line: #e3e7ea;
+  --mist: #f3f5f4;
+  --footer: #0e2433;
+  --on-navy: #d6e6ef;
+  --yellow: #f9ba09;
+  --white: #ffffff;
+  --lime-on-navy: #bccf0c;
+  --veil: rgb(255 255 255 / 0.1);
+  --veil-line: rgb(255 255 255 / 0.22);
+  --veil-2: rgb(255 255 255 / 0.14);
+  --veil-line-2: rgb(255 255 255 / 0.28);
+  --dash-on-dark: rgb(214 230 239 / 0.5);
+
+  /* Archetype colours: the values of archetypes[].colour in src/data/cards.json
+     (a unit test keeps them in sync). Text on them: white on a2, a3, a4-dark; ink otherwise. */
+  --a1: #ef7c00;
+  --a2: #ba1153;
+  --a3: #008198;
+  --a4: #009878;
+  --a5: #fbb900;
+  --a6: #bbce01;
+  --a7: #43bccd;
+
+  /* ---- Type ---- */
+  --font: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-h1: clamp(38px, 4.2vw, 54px);
+  --fs-h2: clamp(32px, 3.6vw, 48px);
+  --fs-h2-band: clamp(34px, 4vw, 54px);
+  --fs-h2-panel: clamp(30px, 3.2vw, 42px);
+  --fs-h3-panel: clamp(26px, 2.6vw, 34px);
+  --fs-h3-lg: 26px;
+  --fs-h3: 24px;
+  --fs-h3-sm: 21px;
+  --fs-lead: 21px;
+  --fs-body-lg: 18px;
+  --fs-body: 17px;
+  --fs-body-sm: 16px;
+  --fs-small: 15px;
+  --fs-eyebrow: 14px;
+  --fs-tiny: 13px;
+  --fs-stat: 56px;
+  --fs-ghost: 44px;
+  --track-h1: -0.028em;
+  --track-h2: -0.025em;
+  --track-h3: -0.015em;
+  --track-eyebrow: 0.08em;
+  --track-stat: -0.03em;
+
+  /* ---- Layout ---- */
+  --container: 1200px;
+  --pad-x: clamp(20px, 4vw, 40px);
+  --section-y: 104px;
+  --gap-grid: 22px;
+  --gap-head: 44px;
+
+  /* ---- Radii ---- */
+  --r-pill: 999px;
+  --r-card: 22px;
+  --r-panel: 28px;
+  --r-figure: 20px;
+  --r-img: 10px;
+  --r-img-sm: 9px;
+  --r-icon: 12px;
+  --r-step: 8px;
+  --r-logo: 6px;
+  --r-qcard: 16px;
+
+  /* ---- Shadows ---- */
+  --shadow-card: 0 18px 34px -16px rgb(10 30 45 / 0.4);
+  --shadow-panel-card: 0 24px 44px -16px rgb(10 30 45 / 0.35);
+  --shadow-hero: 0 28px 50px -14px rgb(10 30 45 / 0.45);
+  --shadow-hero-top: 0 34px 60px -14px rgb(10 30 45 / 0.55);
+  --shadow-qcard: 0 34px 60px -18px rgb(0 0 0 / 0.5);
+  --shadow-btn: 0 8px 20px -8px rgb(7 84 120 / 0.45);
+
+  /* ---- Motion ---- */
+  --lift: -6px;
+  --t-lift: transform 0.25s ease;
+
+  /* ---- Aliases used by the inner pages (deck, viewer, Leitfaden) ---- */
+  --bg: var(--mist);
+  --surface: var(--white);
+  --ink-2: var(--body);
+  --brand: var(--navy);
+  --brand-ink: var(--white);
+  --accent: var(--green-text);
+  --focus: #0a66c2;
+  --radius: 14px;
+  --card-radius: 4.2%;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.08), 0 6px 18px rgb(0 0 0 / 0.08);
+  --shadow-lg: 0 2px 6px rgb(0 0 0 / 0.12), 0 18px 40px rgb(0 0 0 / 0.16);
+  --gutter: 16px;
+  --card-ratio: 893 / 1259;
+  color-scheme: light;
+}

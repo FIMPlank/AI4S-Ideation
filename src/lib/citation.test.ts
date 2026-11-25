@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { apaCitation } from './citation'
+import { apaCitation, shortCitation, shortJournal } from './citation'
 
 describe('apaCitation', () => {
   it('formats the brochure paper in APA 7', () => {
@@ -31,5 +31,25 @@ describe('apaCitation', () => {
         url: '',
       }),
     ).toBe('Sartre, J.-P. (1943). T. J, 1, 1. https://doi.org/x')
+  })
+})
+
+describe('short forms', () => {
+  const p = {
+    authors: ['Tobias Plank', 'Daniel Leuthe'],
+    year: 2026,
+    title: 'T',
+    journal: 'Communications of the Association for Information Systems',
+    volume: 58,
+    pages: '1–2',
+    doi: '10.1/x',
+    url: 'https://example.org',
+  }
+  it('cites the first author with et al.', () => {
+    expect(shortCitation(p)).toBe('Plank et al. (2026)')
+    expect(shortCitation({ ...p, authors: ['Tobias Plank'] })).toBe('Plank (2026)')
+  })
+  it('abbreviates the journal', () => {
+    expect(shortJournal(p.journal)).toBe('Communications of the AIS')
   })
 })

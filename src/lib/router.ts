@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react'
 
+/** Sections of the landing page that have their own deep link (#/spielmodi). */
+export const LANDING_SECTIONS = ['spielmodi', 'forschung'] as const
+export type LandingSection = (typeof LANDING_SECTIONS)[number]
+
 export type Route =
-  | { name: 'landing' }
+  /** section scrolls the landing page; not part of the page identity */
+  | { name: 'landing'; section?: LandingSection }
   | { name: 'deck' }
   | { name: 'archetype'; id: string }
   | { name: 'card'; id: string }
@@ -43,6 +48,9 @@ function matchRoute(parts: string[]): Route {
       return id ? { name: 'leitfaden', section: id } : { name: 'leitfaden' }
     case 'ziehen':
       return id ? { name: 'notFound' } : { name: 'draw' }
+    case 'spielmodi':
+    case 'forschung':
+      return id ? { name: 'notFound' } : { name: 'landing', section: head }
     case 'impressum':
       return { name: 'impressum' }
     case 'datenschutz':

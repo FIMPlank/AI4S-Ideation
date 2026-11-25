@@ -56,7 +56,7 @@ export function App() {
   const { route, params } = useLocation()
   const key = pageKey(route)
   const first = useRef(true)
-  const deepSection = route.name === 'leitfaden' ? route.section : undefined
+  const deepSection = route.name === 'leitfaden' || route.name === 'landing' ? route.section : undefined
 
   useEffect(() => {
     document.title = titleFor(route)
@@ -68,7 +68,7 @@ export function App() {
       first.current = false
       return
     }
-    // a Leitfaden deep link scrolls to its own section
+    // a Leitfaden or landing deep link scrolls to its own section
     if (deepSection) return
     window.scrollTo(0, 0)
     // move focus to the new page so screen readers announce it
@@ -89,7 +89,7 @@ export function App() {
 function Page({ route, params }: { route: Route; params: URLSearchParams }) {
   switch (route.name) {
     case 'landing':
-      return <Landing />
+      return <Landing section={route.section} />
     case 'deck':
       return <Deck params={params} />
     case 'archetype':
