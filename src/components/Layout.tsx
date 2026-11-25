@@ -25,21 +25,20 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
       <header className="site-header">
         <div className="container site-header__inner">
           <a href="#/" className="brand">
-            <svg aria-hidden="true" width="26" height="26" viewBox="0 0 32 32">
-              <rect
-                x="7"
-                y="4"
-                width="18"
-                height="24"
-                rx="3"
-                fill="currentColor"
-                opacity=".35"
-                transform="rotate(-10 16 16)"
+            <svg className="brand__mark" aria-hidden="true" width="34" height="34" viewBox="0 0 36 36">
+              {/* three fanned mini cards in archetype colours */}
+              <rect x="10" y="6" width="16" height="23" rx="2.5" fill="#008198" transform="rotate(-18 18 30)" />
+              <rect x="10" y="6" width="16" height="23" rx="2.5" fill="#FBB900" transform="rotate(0 18 30)" />
+              <rect x="10" y="6" width="16" height="23" rx="2.5" fill="#EF7C00" transform="rotate(18 18 30)" />
+              <path
+                d="M18 12.5l1.6 3.3 3.6.5-2.6 2.5.6 3.6-3.2-1.7-3.2 1.7.6-3.6-2.6-2.5 3.6-.5z"
+                fill="#fff"
+                transform="rotate(18 18 30)"
               />
-              <rect x="7" y="4" width="18" height="24" rx="3" fill="currentColor" transform="rotate(8 16 16)" />
             </svg>
             <span className="brand__text">
-              {t.site.brand} <span className="brand__sub">{t.site.brandSub}</span>
+              <span className="brand__kicker">{t.site.brandKicker}</span>
+              <span className="brand__name">{t.site.brand}</span>
             </span>
           </a>
           <nav aria-label={t.site.mainNav}>

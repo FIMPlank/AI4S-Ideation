@@ -164,11 +164,35 @@ a {
   text-decoration: none;
   line-height: 1.1;
 }
-.brand__sub {
-  display: block;
-  font-weight: 450;
-  font-size: 0.8rem;
-  opacity: 0.85;
+.brand__mark {
+  flex: none;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.35));
+  transition: transform 0.2s ease;
+}
+.brand:hover .brand__mark {
+  transform: rotate(-6deg) scale(1.05);
+}
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.brand__kicker {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #bbce01;
+}
+.brand__name {
+  font-size: 1.12rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand__mark {
+    transition: none;
+  }
 }
 .main-nav {
   list-style: none;
@@ -325,6 +349,7 @@ a {
 }
 .hero__fan {
   position: relative;
+  overflow-x: clip;
   height: 230px;
   display: flex;
   justify-content: center;
@@ -1175,6 +1200,8 @@ a {
 }
 .research-link {
   display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
   align-items: center;
   gap: 0.6rem;
   font-weight: 600;
@@ -1614,12 +1641,29 @@ a {
 
 /* Main nav on small phones: three items next to the brand */
 @media (max-width: 480px) {
-  .brand__sub {
-    display: none;
+  .brand {
+    gap: 0.35rem;
+  }
+  .brand__kicker {
+    font-size: 0.5rem;
+    letter-spacing: 0.06em;
+  }
+  .brand__name {
+    font-size: 0.92rem;
+  }
+  .brand__mark {
+    width: 26px;
+    height: 26px;
+  }
+  .site-header__inner {
+    gap: 0.4rem;
+  }
+  .main-nav {
+    gap: 0;
   }
   .main-nav a {
-    padding: 0.55rem 0.45rem;
-    font-size: 0.88rem;
+    padding: 0.55rem 0.32rem;
+    font-size: 0.82rem;
   }
 }
 
@@ -1731,5 +1775,17 @@ a {
 @media print {
   .mode-card__actions {
     display: none;
+  }
+}
+
+/* Very narrow phones: nav moves below the wordmark instead of overflowing */
+@media (max-width: 370px) {
+  .site-header__inner {
+    flex-wrap: wrap;
+    row-gap: 0;
+    padding-top: 0.5rem;
+  }
+  .site-header__inner > nav {
+    margin-left: -0.32rem;
   }
 }

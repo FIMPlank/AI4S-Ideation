@@ -3,9 +3,9 @@ import type { CardType } from '../data/types'
 /** All UI strings. An English edition later = add en.ts with the same shape. */
 export const de = {
   site: {
-    name: 'Ideation Cards Twin Transformation',
+    name: 'AI4 Sustainability Ideation Cards',
     brand: 'Ideation Cards',
-    brandSub: 'Twin Transformation',
+    brandKicker: 'AI4 Sustainability',
     publisher: 'Fraunhofer-Forschungscampus Twin Transformation',
     publisherShort: 'FFTT',
     institute: 'Fraunhofer FIT',
@@ -24,7 +24,7 @@ export const de = {
     privacy: 'Datenschutz',
   },
   landing: {
-    eyebrow: 'Ideation Cards · KI für die Twin Transformation',
+    eyebrow: 'AI4 Sustainability Ideation Cards',
     lead: 'Digital und nachhaltig zugleich: Das Kartendeck zeigt sieben Archetypen, mit denen Unternehmen künstliche Intelligenz für ökonomische, ökologische und soziale Nachhaltigkeit einsetzen. Jeder Archetyp kommt mit Technologie- und Organisationskarte, einer Aktivierungsfrage und vier Fallbeispielen aus der Praxis.',
     ctaExplore: 'Karten entdecken',
     ctaDraw: 'Karte ziehen',
