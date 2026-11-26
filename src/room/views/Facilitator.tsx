@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
-import { archetypes } from '../../data/deck'
+import { archetypes, getArchetype, getCard } from '../../data/deck'
 import { t } from '../../i18n/de'
 import { useRoomHref } from '../link'
 import { absoluteUrl } from '../../lib/router'
+import { archetypeSurface } from '../../lib/color'
+import { CardImage } from '../../components/CardImage'
 import {
   assignUngrouped,
   balanceGroups,
-  canAssignArchetype,
   DISCUSSION_TOPICS,
   nextStep,
   prevStep,
@@ -456,44 +457,91 @@ function DrawControls({
   snap: RoomSnapshot
   prioritised: string[]
 }) {
+  const suggestion = suggestArchetype(ARCHETYPE_IDS, prioritised, snap.draws)
   return (
-    <ul className="draw-list">
+    <ul className="draw-groups">
       {groupsOf(snap).map((g) => {
         const d = snap.draws.find((x) => x.groupNo === g)
-        const suggestion = suggestArchetype(ARCHETYPE_IDS, prioritised, snap.draws)
+        const a = getArchetype(d?.archetypeId)
+        const card = d ? getCard(`${d.archetypeId}-archetype`) : undefined
+        const surface = a ? archetypeSurface(a.colour) : null
+        const people = snap.members.filter((m) => m.groupNo === g).map((m) => m.displayName)
         return (
-          <li key={g}>
-            <strong>{r.group(g)}</strong>
-            {d ? (
-              <span className="draw-list__result">{archetypeLabel(d.archetypeId)}</span>
-            ) : suggestion?.method === 'priorisiert' ? (
-              <button
-                type="button"
-                className="btn btn--primary btn--small"
-                onClick={() => fire(store.setDraw(g, suggestion.archetypeId, 'priorisiert'))}
-              >
-                {c.drawPriority(archetypeShort(suggestion.archetypeId))}
-              </button>
-            ) : (
-              <button type="button" className="btn btn--primary btn--small" onClick={() => fire(store.draw(g))}>
-                {c.draw}
-              </button>
-            )}
-            <label className="visually-hidden" htmlFor={`draw-${g}`}>
-              {c.drawManual}
-            </label>
-            <select
-              id={`draw-${g}`}
-              value={d?.archetypeId ?? ''}
-              onChange={(e) => fire(store.setDraw(g, e.target.value || null))}
+          <li key={g} className="draw-group">
+            <div
+              className="draw-group__head"
+              style={surface ? { background: surface.bg, color: surface.fg } : undefined}
             >
-              <option value="">{c.drawNone}</option>
-              {ARCHETYPE_IDS.map((a) => (
-                <option key={a} value={a} disabled={!canAssignArchetype(g, a, snap.draws)}>
-                  {archetypeLabel(a)}
-                </option>
-              ))}
-            </select>
+              <strong>{r.group(g)}</strong>
+              <span>{people.length ? people.join(', ') : c.drawNoPeople}</span>
+            </div>
+            <div className="draw-group__body">
+              <div className="draw-group__result">
+                {card && a ? (
+                  <>
+                    <CardImage card={card} size="thumb" decorative />
+                    <p>
+                      <strong>{archetypeShort(a.id)}</strong>
+                      <br />
+                      {a.title}
+                    </p>
+                  </>
+                ) : (
+                  <p className="draw-group__empty">{c.drawPending}</p>
+                )}
+              </div>
+              <div className="draw-group__actions">
+                {d ? (
+                  <button
+                    type="button"
+                    className="btn btn--ghost btn--small"
+                    onClick={() => fire(store.setDraw(g, null))}
+                  >
+                    {c.drawReset}
+                  </button>
+                ) : (
+                  <>
+                    <button type="button" className="btn btn--primary btn--small" onClick={() => fire(store.draw(g))}>
+                      {c.draw}
+                    </button>
+                    {suggestion?.method === 'priorisiert' && (
+                      <button
+                        type="button"
+                        className="btn btn--small"
+                        onClick={() => fire(store.setDraw(g, suggestion.archetypeId, 'priorisiert'))}
+                      >
+                        {c.drawPriority(archetypeShort(suggestion.archetypeId))}
+                      </button>
+                    )}
+                  </>
+                )}
+              </div>
+              <fieldset className="arch-pick">
+                <legend>{c.drawManual}</legend>
+                {ARCHETYPE_IDS.map((id) => {
+                  const arch = getArchetype(id)!
+                  const sf = archetypeSurface(arch.colour)
+                  const takenBy = snap.draws.find((x) => x.archetypeId === id && x.groupNo !== g)?.groupNo
+                  const on = d?.archetypeId === id
+                  return (
+                    <button
+                      key={id}
+                      type="button"
+                      className={`arch-pick__tile${on ? ' is-on' : ''}`}
+                      style={{ background: sf.bg, color: sf.fg }}
+                      disabled={takenBy !== undefined || on}
+                      aria-pressed={on}
+                      title={takenBy ? `${archetypeLabel(id)} – ${r.group(takenBy)}` : archetypeLabel(id)}
+                      aria-label={takenBy ? `${archetypeLabel(id)} (${r.group(takenBy)})` : archetypeLabel(id)}
+                      onClick={() => fire(store.setDraw(g, id))}
+                    >
+                      {String(arch.number).padStart(2, '0')}
+                      {takenBy !== undefined && <small>G{takenBy}</small>}
+                    </button>
+                  )
+                })}
+              </fieldset>
+            </div>
           </li>
         )
       })}

@@ -1687,3 +1687,124 @@
   min-width: 0;
   overflow-x: auto;
 }
+
+/* ---------- draw step (console) ---------- */
+.draw-groups {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.draw-group {
+  border-radius: var(--r-card);
+  background: var(--mist);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.draw-group__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.2rem 0.6rem;
+  padding: 0.6rem 1rem;
+  background: var(--line);
+  color: var(--ink);
+  font-size: var(--fs-small);
+}
+.draw-group__head strong {
+  font-size: var(--fs-body-lg);
+}
+.draw-group__body {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem;
+  align-content: start;
+}
+.draw-group__result {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 0.8rem;
+  align-items: center;
+  min-height: 101px;
+}
+.draw-group__result .card-img {
+  width: 72px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+}
+.draw-group__result p {
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: 1.35;
+}
+.draw-group__result .draw-group__empty {
+  grid-column: 1 / -1;
+  display: grid;
+  place-items: center;
+  min-height: 101px;
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+}
+.draw-group__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.arch-pick {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.arch-pick legend {
+  margin-bottom: 0.35rem;
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  color: var(--muted);
+}
+.arch-pick__tile {
+  display: grid;
+  place-items: center;
+  min-height: 40px;
+  padding: 0.2rem 0;
+  border: 0;
+  border-radius: 10px 0 10px 0;
+  font: inherit;
+  font-size: var(--fs-small);
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+.arch-pick__tile small {
+  font-size: 0.7em;
+  font-weight: 700;
+}
+.arch-pick__tile:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+.arch-pick__tile:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+.arch-pick__tile.is-on {
+  opacity: 1;
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+.arch-pick__tile:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .arch-pick__tile {
+    transition: none;
+  }
+}
