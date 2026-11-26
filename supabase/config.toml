@@ -1,0 +1,16 @@
+# Minimal Supabase CLI config for local development (`supabase start`).
+# The live project is linked with `supabase link --project-ref <ref>`; see README.
+project_id = "ai4s-ideation"
+
+[api]
+schemas = ["public"]
+
+[db]
+major_version = 17
+
+[auth]
+site_url = "http://localhost:5173"
+enable_anonymous_sign_ins = true
+
+[realtime]
+enabled = true
