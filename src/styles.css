@@ -337,7 +337,21 @@ a {
   user-select: none;
 }
 .chip-toggle--sdg {
-  padding-left: 0.3rem;
+  align-items: stretch;
+  padding: 0 0.85rem 0 0;
+  overflow: hidden;
+}
+/* Number square fills the pill's left end, as in .sdg-chip */
+.chip-toggle--sdg > .sdg-badge {
+  width: 38px;
+  height: auto;
+  border-radius: 0;
+  padding-left: 3px;
+}
+.chip-toggle--sdg > span:last-of-type,
+.chip-toggle--sdg::after {
+  align-self: center;
+  padding: 0.3rem 0;
 }
 .chip-toggle input {
   position: absolute;
