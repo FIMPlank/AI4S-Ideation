@@ -16,6 +16,36 @@ export type Route =
   | { name: 'impressum' }
   | { name: 'datenschutz' }
   | { name: 'notFound' }
+  /** #/raum: open a room or enter a code */
+  | { name: 'roomHome' }
+  /** #/raum/neu: create a room */
+  | { name: 'roomNew' }
+  /** #/raum/ABC234[/moderation|/leinwand|/ergebnis]; code "demo" is the Demo-Raum */
+  | { name: 'room'; code: string; view: RoomView }
+
+export const ROOM_VIEWS = ['teilnehmer', 'moderation', 'leinwand', 'ergebnis'] as const
+export type RoomView = (typeof ROOM_VIEWS)[number]
+
+/** The code of the in-browser Demo-Raum (real codes have 6 characters). */
+export const DEMO_CODE = 'demo'
+
+/** Room codes are case-insensitive; "demo" stays lowercase. */
+export const normalizeRoomCode = (code: string) =>
+  code.toLowerCase() === DEMO_CODE ? DEMO_CODE : code.toUpperCase().replace(/[\s-]/g, '')
+
+/** Href of a room view, e.g. roomHref('ABC234', 'leinwand') → "#/raum/ABC234/leinwand". */
+export const roomHref = (code: string, view: RoomView = 'teilnehmer') =>
+  `#/raum/${code}${view === 'teilnehmer' ? '' : `/${view}`}`
+
+function matchRoom(parts: string[]): Route {
+  const [code, view, ...rest] = parts
+  if (rest.length) return { name: 'notFound' }
+  if (code === undefined) return { name: 'roomHome' }
+  if (code === 'neu') return view ? { name: 'notFound' } : { name: 'roomNew' }
+  if (view !== undefined && (view === 'teilnehmer' || !(ROOM_VIEWS as readonly string[]).includes(view)))
+    return { name: 'notFound' }
+  return { name: 'room', code: normalizeRoomCode(code), view: (view as RoomView | undefined) ?? 'teilnehmer' }
+}
 
 export interface Location {
   route: Route
@@ -28,7 +58,7 @@ export function parseHash(hash: string): Location {
   const [path, search = ''] = raw.split('?')
   const params = new URLSearchParams(search)
   const parts = path.split('/').filter(Boolean).map(decodeURIComponent)
-  const route = matchRoute(parts)
+  const route = parts[0] === 'raum' ? matchRoom(parts.slice(1)) : matchRoute(parts)
   return { route, params }
 }
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { lazy, Suspense, useEffect, useRef } from 'react'
 import { Layout } from './components/Layout'
 import { getArchetype, getCard } from './data/deck'
 import { t } from './i18n/de'
@@ -12,6 +12,9 @@ import { Landing } from './pages/Landing'
 import { Leitfaden } from './pages/Leitfaden'
 import { Legal } from './pages/Legal'
 import { NotFound } from './pages/NotFound'
+
+// the Live-Raum (and supabase-js, qrcode) loads only on #/raum routes
+const RoomApp = lazy(() => import('./room/RoomApp'))
 
 const SITE = t.site.name
 const DEFAULT_DESCRIPTION = document.querySelector('meta[name="description"]')?.getAttribute('content') ?? ''
@@ -42,6 +45,11 @@ function titleFor(route: Route): string {
       return `${t.legal.impressum} · ${SITE}`
     case 'datenschutz':
       return `${t.legal.privacy} · ${SITE}`
+    case 'roomHome':
+    case 'roomNew':
+      return `${t.room.title} · ${SITE}`
+    case 'room':
+      return `${t.room.title} ${route.code === 'demo' ? t.room.home.demoTitle : route.code} · ${SITE}`
     default:
       return `${t.titles.notFound} · ${SITE}`
   }
@@ -49,6 +57,7 @@ function titleFor(route: Route): string {
 
 /** Identity of a "page" for focus/scroll: query changes (filters, prev/next lists) don't count. */
 function pageKey(route: Route): string {
+  if (route.name === 'room') return `room/${route.code}/${route.view}`
   return route.name + ('id' in route ? `/${route.id}` : '')
 }
 
@@ -79,6 +88,14 @@ export function App() {
     }
   }, [key, deepSection])
 
+  // room screens (phone, console, projector) are full-screen, without the site chrome
+  if (route.name === 'room')
+    return (
+      <Suspense fallback={null}>
+        <RoomApp route={route} params={params} />
+      </Suspense>
+    )
+
   return (
     <Layout route={route}>
       <Page route={route} params={params} />
@@ -103,6 +120,13 @@ function Page({ route, params }: { route: Route; params: URLSearchParams }) {
     case 'impressum':
     case 'datenschutz':
       return <Legal kind={route.name} />
+    case 'roomHome':
+    case 'roomNew':
+      return (
+        <Suspense fallback={null}>
+          <RoomApp route={route} params={params} />
+        </Suspense>
+      )
     default:
       return <NotFound />
   }

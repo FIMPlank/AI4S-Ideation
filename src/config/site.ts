@@ -13,3 +13,10 @@ export const BROCHURE_PDF_PATH = 'downloads/ideation-cards-broschuere.pdf'
  * "In Miro" tile then shows "Bald verfügbar" instead of a link.
  */
 export const miroverseUrl: string = site.miroverseUrl
+
+/**
+ * Feature flag for live rooms: switches "Raum eröffnen" on the landing page from
+ * "bald verfügbar" to a link. Live rooms also need VITE_SUPABASE_URL and
+ * VITE_SUPABASE_PUBLISHABLE_KEY at build time (see src/room/config.ts).
+ */
+export const liveRoomsFlag: boolean = site.liveRooms

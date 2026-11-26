@@ -65,3 +65,21 @@ function smallest(sizes: number[]): number {
   for (let i = 1; i < sizes.length; i++) if (sizes[i] < sizes[best]) best = i
   return best
 }
+
+/**
+ * Groups for participants who have none yet, each into the currently
+ * smallest group. Returns only the changed members (empty when nothing to do).
+ */
+export function assignUngrouped(
+  members: Pick<Member, 'id' | 'role' | 'groupNo'>[],
+  groupCount: number,
+): Record<string, number> {
+  const work = members.map((m) => ({ ...m }))
+  const out: Record<string, number> = {}
+  for (const m of work) {
+    if (m.role !== 'participant' || m.groupNo !== null) continue
+    m.groupNo = groupForNewcomer(work, groupCount)
+    out[m.id] = m.groupNo
+  }
+  return out
+}

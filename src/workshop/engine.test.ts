@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { guideCards } from '../data/deck'
 import { MODES } from '../config/modes'
 import {
+  assignUngrouped,
   CODE_ALPHABET,
   DEFAULT_SETTINGS,
   FLOWS,
@@ -144,6 +145,28 @@ describe('groups', () => {
       3,
     )
     expect(sizes.sort()).toEqual([3, 3, 4])
+  })
+})
+
+describe('assignUngrouped', () => {
+  const m = (id: string, groupNo: number | null, role: 'participant' | 'facilitator' = 'participant') => ({
+    id,
+    role,
+    groupNo,
+  })
+  it('fills the smallest groups and skips facilitators and grouped people', () => {
+    const out = assignUngrouped([m('f', null, 'facilitator'), m('a', 1), m('b', 1), m('c', null), m('d', null)], 3)
+    expect(out).toEqual({ c: 2, d: 3 })
+  })
+  it('balances a room where nobody has a group yet', () => {
+    const out = assignUngrouped(
+      ['a', 'b', 'c', 'd', 'e'].map((id) => m(id, null)),
+      2,
+    )
+    expect(Object.values(out).sort()).toEqual([1, 1, 1, 2, 2])
+  })
+  it('does nothing when everyone has a group', () => {
+    expect(assignUngrouped([m('a', 2)], 3)).toEqual({})
   })
 })
 
