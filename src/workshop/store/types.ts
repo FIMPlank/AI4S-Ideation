@@ -29,6 +29,18 @@ export interface StoreState {
   ready: boolean
   /** Last failed action, for a toast; cleared by the next successful one. */
   lastError: DenyReason | null
+  /** Counts the facilitator sees before reveal (never the distribution); null for participants. */
+  progress: HiddenProgress | null
+  /** User ids currently online (presence); null if unknown. */
+  online: string[] | null
+}
+
+export interface HiddenProgress {
+  participants: number
+  /** placed all their dots */
+  voted: number
+  /** rated every criterion of every strategy item */
+  rated: number
 }
 
 export interface CreateRoomInput {

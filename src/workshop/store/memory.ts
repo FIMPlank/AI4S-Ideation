@@ -10,6 +10,7 @@ import { stepDef } from '../flows'
 import { balanceGroups } from '../groups'
 import { LIMITS } from '../limits'
 import { hasStep } from '../program'
+import { ratingProgress, voteProgress } from '../progress'
 import {
   WorkshopError,
   assertFacilitator,
@@ -286,6 +287,8 @@ export class MemoryStore implements WorkshopStore {
       connection: 'live',
       ready: true,
       lastError: null,
+      progress: null,
+      online: null,
     }
     this.attach()
     this.refresh()
@@ -304,7 +307,16 @@ export class MemoryStore implements WorkshopStore {
     const id = this.roomId
     const me = id ? this.server.me(id, this.userId) : this.state.me
     const snapshot = id ? this.server.snapshotFor(id, this.userId) : null
-    this.state = { ...this.state, me, snapshot }
+    const raw = id && me.role === 'facilitator' ? this.server.raw(id) : undefined
+    const progress = raw
+      ? {
+          participants: raw.members.filter((m) => m.role === 'participant').length,
+          voted: voteProgress(raw.members, raw.votes, raw.room.settings.dotsPerPerson).done,
+          rated: ratingProgress(raw.members, raw.ratings, raw.selections).done,
+        }
+      : null
+    const online = snapshot ? snapshot.members.map((m) => m.userId) : null
+    this.state = { ...this.state, me, snapshot, progress, online }
     for (const fn of this.listeners) fn()
   }
 
