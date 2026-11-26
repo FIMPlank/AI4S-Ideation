@@ -198,8 +198,16 @@ class SupabaseStore implements WorkshopStore {
         table === 'ideas' && me.role !== 'facilitator' && me.groupNo
           ? `room_group=eq.${room}:${me.groupNo}`
           : `room_id=eq.${room}`
-      ch.on('postgres_changes', { event: '*', schema: 'public', table, filter }, (p) =>
-        this.onRow(table, p.eventType, p.new as Row, p.old as Row),
+      ch.on('postgres_changes', { event: 'INSERT', schema: 'public', table, filter }, (p) =>
+        this.onRow(table, 'INSERT', p.new as Row, p.old as Row),
+      )
+      ch.on('postgres_changes', { event: 'UPDATE', schema: 'public', table, filter }, (p) =>
+        this.onRow(table, 'UPDATE', p.new as Row, p.old as Row),
+      )
+      // Supabase can't filter DELETE events, and under RLS they carry only the
+      // primary key (a random uuid): listen unfiltered, drop ids we don't know
+      ch.on('postgres_changes', { event: 'DELETE', schema: 'public', table }, (p) =>
+        this.onRow(table, 'DELETE', p.new as Row, p.old as Row),
       )
     }
     ch.on('presence', { event: 'sync' }, () => this.set({ online: Object.keys(ch.presenceState()) }))
@@ -243,8 +251,10 @@ class SupabaseStore implements WorkshopStore {
     const { key, map } = TABLES[table]
     const list = snap[key] as { id: string }[]
     let next: { id: string }[]
-    if (type === 'DELETE') next = list.filter((x) => x.id !== old?.id)
-    else {
+    if (type === 'DELETE') {
+      if (!old?.id || !list.some((x) => x.id === old.id)) return
+      next = list.filter((x) => x.id !== old.id)
+    } else {
       const item = map(row) as { id: string }
       const i = list.findIndex((x) => x.id === item.id)
       next = i < 0 ? [...list, item] : list.map((x, k) => (k === i ? item : x))
