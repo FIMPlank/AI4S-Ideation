@@ -15,6 +15,8 @@ export interface ModeConfig {
   available: boolean
 }
 
+export type ModeId = ModeConfig['id']
+
 export const MODES: readonly ModeConfig[] = [
   { id: 'inspiration-1', name: 'Inspirations-Modus 1', cardMode: 'inspiration-1', available: false },
   { id: 'inspiration-2', name: 'Inspirations-Modus 2', cardMode: 'inspiration-2', available: false },
