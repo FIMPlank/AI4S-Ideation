@@ -47,7 +47,8 @@ export function createSupabaseBackend(): WorkshopBackend {
       const { data: d, error } = await client.auth.signInAnonymously()
       if (error || !d.user) {
         session = null
-        throw new WorkshopError('invalid', error?.message)
+        const disabled = error && 'code' in error && error.code === 'anonymous_provider_disabled'
+        throw new WorkshopError(disabled ? 'sign-in-disabled' : 'invalid', error?.message)
       }
       return d.user.id
     })())

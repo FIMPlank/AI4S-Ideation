@@ -384,6 +384,8 @@ export const de = {
       'room-full': 'Der Raum ist voll.',
       'stale-step': 'Der Schritt wurde gerade schon gewechselt.',
       invalid: 'Ungültige Eingabe.',
+      'sign-in-disabled':
+        'Die anonyme Anmeldung ist im Supabase-Projekt ausgeschaltet. Bitte unter Authentication → Sign In / Providers „Allow anonymous sign-ins“ aktivieren.',
       taken: 'Schon vergeben.',
       'not-found': 'Nicht gefunden.',
     },

@@ -5,10 +5,18 @@ import { MODES } from '../config/modes'
 import { firstList, sectionById } from '../content/leitfaden'
 import { t } from '../i18n/de'
 import { absoluteUrl, href, roomHref } from '../lib/router'
-import { DEFAULT_SETTINGS, LIMITS, normalizeSettings, type ProgramId, type RoomSettings } from '../workshop'
+import {
+  DEFAULT_SETTINGS,
+  LIMITS,
+  normalizeSettings,
+  WorkshopError,
+  type ProgramId,
+  type RoomSettings,
+} from '../workshop'
 import type { CreatedRoom } from '../workshop/store/types'
 import { liveBackend } from './backend'
 import { liveRoomsEnabled } from './config'
+import { errorText } from './labels'
 import { CopyButton, RoomCode } from './components/basics'
 
 const c = t.room.create
@@ -20,7 +28,7 @@ export function CreateRoom() {
   const [program, setProgram] = useState<ProgramId>('komplett')
   const [s, setS] = useState<RoomSettings>(DEFAULT_SETTINGS)
   const [busy, setBusy] = useState(false)
-  const [failed, setFailed] = useState(false)
+  const [failed, setFailed] = useState<boolean | 'sign-in-disabled'>(false)
   const [done, setDone] = useState<CreatedRoom | null>(null)
   const set = (patch: Partial<RoomSettings>) => setS((x) => normalizeSettings({ ...x, ...patch }))
   const usesI1 = program === 'komplett' || program === 'inspiration-1'
@@ -75,8 +83,8 @@ export function CreateRoom() {
             const backend = await liveBackend()
             if (!backend) throw new Error('no backend')
             setDone(await backend.createRoom({ title, program, settings: s }))
-          } catch {
-            setFailed(true)
+          } catch (err) {
+            setFailed(err instanceof WorkshopError && err.reason === 'sign-in-disabled' ? err.reason : true)
           } finally {
             setBusy(false)
           }
@@ -196,7 +204,7 @@ export function CreateRoom() {
 
         {failed && (
           <p className="field__error" role="alert">
-            {c.failed}
+            {failed === true ? c.failed : errorText(failed)}
           </p>
         )}
         <button type="submit" className="btn btn--primary btn--lg" disabled={busy}>

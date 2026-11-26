@@ -20,6 +20,7 @@ export type DenyReason =
   | 'room-full'
   | 'stale-step'
   | 'invalid'
+  | 'sign-in-disabled'
   | 'taken'
   | 'not-found'
 
