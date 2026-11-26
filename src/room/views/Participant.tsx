@@ -58,6 +58,7 @@ export function ParticipantView({ store, state }: { store: WorkshopStore; state:
       </header>
       <ConnectionBadge connection={state.connection} />
       <main className="phone__body" id="main" tabIndex={-1}>
+        {me.role === 'facilitator' && <p className="callout">{p.facilitatorHere}</p>}
         <h1 className="phone__title">{stepLabel(room.stepKey)}</h1>
         {room.status === 'closed' ? (
           <Closed code={room.code} />

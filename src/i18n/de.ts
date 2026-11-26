@@ -537,6 +537,8 @@ export const de = {
       hiddenUntilReveal: 'Ergebnisse werden nach dem Auflösen angezeigt.',
     },
     participant: {
+      facilitatorHere:
+        'Sie sind in diesem Browser die Moderation. Um als Teilnehmende zu testen, nutzen Sie ein anderes Gerät oder ein privates Fenster.',
       noTargets: 'Die Moderation wählt gerade aus, was besprochen und bewertet wird.',
       waiting: 'Warten auf die Moderation …',
       welcome: (name: string) => `Willkommen, ${name}!`,
