@@ -28,7 +28,43 @@ Filters live in the URL (`#/karten?typ=case&sdg=13&q=recycling`), and the viewer
 keeps the list you came from (`#/karte/a1-case-1?liste=filter&typ=case…`), so
 every state can be linked and "back" works.
 
-No backend, no cookies, no trackers, no third-party requests. Fonts are self-hosted.
+No cookies, no trackers, no third-party requests. Fonts are self-hosted. The
+card explorer has no backend; only the Live-Raum talks to Supabase (EU).
+
+## Live-Raum (online workshop)
+
+The facilitator runs the workshop from a laptop (mirrored to a projector),
+participants join on their phones with a 6-character code or QR code. No accounts:
+everyone gets an anonymous Supabase session.
+
+| Route                     | Who          | What                                                                      |
+| ------------------------- | ------------ | ------------------------------------------------------------------------- |
+| `#/raum`                  | everyone     | Join with a code, open a room, or try the Demo-Raum                       |
+| `#/raum/neu`              | facilitator  | Pick a program and settings, get the code and the Moderationslink         |
+| `#/raum/:code`            | participants | Phone view: follows the facilitator step by step                          |
+| `#/raum/:code/moderation` | facilitator  | Console: step rail, timer, groups, draw, reveal (keys: → ← Space)         |
+| `#/raum/:code/leinwand`   | facilitator  | Projector: big code + QR, live results, draw animation                    |
+| `#/raum/:code/ergebnis`   | everyone     | Summary; print stylesheet; facilitator exports CSV + PNG matrix           |
+| `#/raum/demo/...`         | anyone       | Demo-Raum: same screens with simulated participants, runs only in the tab |
+
+Programs: Inspirations-Modus 2, Inspirations-Modus 1, Strategie-Modus, or the full
+workshop (2 → 1 → Strategie). Steps come from the guide cards; Klärungszeit and
+Pitch are optional and marked as coming from the Leitfaden.
+
+Code layout:
+
+```
+src/workshop/           pure TS domain engine (flows, program, groups, draw, tally, ratings, timer, rules) + tests
+src/workshop/store/     WorkshopStore interface; MemoryStore (tests + Demo-Raum)
+src/room/               React screens (lazy-loaded), labels, export, demo bots
+src/room/supabase/      SupabaseStore: RPCs, postgres_changes + presence, optimistic updates (lazy-loaded)
+supabase/migrations/    schema, RLS, RPCs, realtime publication, pg_cron expiry
+supabase/tests/         RLS test (66 checks) + auth shim
+```
+
+The offer is switched on by `liveRooms` in `src/config/site.json` **and** the
+two build variables below. Without them `#/raum` shows "bald verfügbar" and only
+the Demo-Raum works.
 
 ## Local development
 
@@ -128,4 +164,46 @@ The build uses relative URLs (`base: './'`) and hash routing, so it works under
 
 ## Supabase
 
-Not used yet (phase 3: live rooms). Setup notes will follow here.
+A dedicated project (EU, Ireland) used only by this app.
+
+**Client config:** only the project URL and the **publishable** key. Never put
+the secret key (`sb_secret_...`) into the repo, the frontend, a workflow or
+`.env*` files.
+
+- Local: copy `.env.example` to `.env.local` and fill in both values.
+- GitHub: Settings → Secrets and variables → Actions → **Variables**:
+  `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`. `deploy.yml` passes them
+  to the build.
+
+**Project settings:** Authentication → Sign In / Providers → allow anonymous
+sign-ins. pg_cron must be enabled for the daily expiry job.
+
+**Migrations** (`supabase/migrations/`): apply with the CLI
+
+```bash
+supabase link --project-ref <ref>
+supabase db push
+```
+
+or paste the files into the SQL editor in order. If you applied them through the
+SQL editor, tell the CLI once so `db push` doesn't run them again:
+
+```bash
+supabase migration repair --status applied 20261126090000 20261126090100
+```
+
+**What it stores:** rooms, members (anonymous id + display name), group draws,
+ideas, votes, ratings, notes, implementation steps. Votes and ratings stay hidden
+from others until the facilitator reveals them (enforced by RLS). Rooms and
+everything in them are deleted 30 days after creation (`live-rooms-expiry`
+cron job, 03:00 UTC); anonymous users without rooms after 30 days.
+`research_mode` / `research_consent` exist but are off and unused (opt-in only).
+
+**RLS test:** `scripts/rls-test.sh` runs `supabase/tests/rls.test.sql` in a
+rolled-back transaction, either against a throwaway Docker Postgres (default) or
+against `DATABASE_URL` (for example a local `supabase start` database). Never run
+it against the live project.
+
+**Keep-alive:** free projects pause after a week without traffic.
+`.github/workflows/keep-alive.yml` calls the public `ping()` RPC every 3 days
+using the same two variables.

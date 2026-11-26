@@ -27,6 +27,10 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+        env:
+          # Only the URL and the publishable key (repo variables). Never a secret key.
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
       - if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:

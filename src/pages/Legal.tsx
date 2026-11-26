@@ -11,7 +11,17 @@ export function Legal({ kind }: { kind: 'impressum' | 'datenschutz' }) {
         </p>
         <p>{l.placeholder}</p>
       </div>
-      {kind === 'datenschutz' && <p>{l.privacyFacts}</p>}
+      {kind === 'datenschutz' && (
+        <>
+          <p>{l.privacyFacts}</p>
+          <h2>{l.liveTitle}</h2>
+          <ul>
+            {l.liveFacts.map((f) => (
+              <li key={f}>{f}</li>
+            ))}
+          </ul>
+        </>
+      )}
     </div>
   )
 }

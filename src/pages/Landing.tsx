@@ -15,6 +15,7 @@ import { asset, PDF_PATH } from '../lib/assets'
 import { doiUrl, joinAuthors, shortCitation, shortJournal } from '../lib/citation'
 import type { LandingSection } from '../lib/router'
 import { useReducedMotion } from '../lib/useReducedMotion'
+import { liveRoomsEnabled } from '../room/config'
 
 const l = t.landing
 const paper = leitfaden.meta.paper
@@ -329,10 +330,10 @@ function Channels() {
             <h3 className="l-h3">{l.liveTitle}</h3>
           </div>
           <p>{l.liveText}</p>
-          {/* live rooms come with the Supabase phase: no link until then */}
-          <span className="soon-pill soon-pill--yellow">
-            {l.liveCta} · {l.soon.toLowerCase()}
-          </span>
+          {/* without a configured backend only the Demo-Raum is offered */}
+          <a className="lbtn lbtn--yellow" href="#/raum">
+            {liveRoomsEnabled ? l.liveCta : l.liveDemoCta}
+          </a>
         </li>
         <li className="channel">
           <div className="channel__head">
